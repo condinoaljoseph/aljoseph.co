@@ -7,20 +7,27 @@ import Main from '../components/Main';
 import Article from '../components/Article';
 import Footer from '../components/Footer';
 
-export default function Home({ title, description }) {
+import { getAllPosts } from '../utils/api';
+
+export default function Home({ posts }) {
 	return (
 		<>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
-				<meta name="Description" content={description}></meta>
-				<title>{title}</title>
+				<meta
+					name="Description"
+					content="Personal blog by Al Joseph Condino"
+				></meta>
+				<title>elpmid.</title>
 			</Head>
 			<Container>
 				<Header />
 				<Aside />
 				<Main>
-					<Article />
+					{posts && posts.length > 0
+						? posts.map((post) => <Article {...post} />)
+						: null}
 				</Main>
 				<Footer />
 			</Container>
@@ -29,12 +36,17 @@ export default function Home({ title, description }) {
 }
 
 export async function getStaticProps() {
-	const data = await import('../config.json');
+	const posts = getAllPosts([
+		'title',
+		'excerpt',
+		'date',
+		'data',
+		'slug',
+		'author',
+		'content'
+	]);
 
 	return {
-		props: {
-			title: data.default.title,
-			description: data.default.description
-		}
+		props: { posts }
 	};
 }

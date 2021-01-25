@@ -26,7 +26,7 @@ export default function Home({ posts }) {
 				<Aside />
 				<Main>
 					{posts && posts.length > 0
-						? posts.map((post) => <Article {...post} />)
+						? posts.map((post) => <Article key={post.slug} {...post} />)
 						: null}
 				</Main>
 				<Footer />

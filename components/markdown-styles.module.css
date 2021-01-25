@@ -1,0 +1,22 @@
+.markdown {
+	/* @apply leading-relaxed; */
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+	@apply mb-7;
+}
+
+.markdown blockquote {
+	@apply text-xl italic mr-7 mb-7 leading-7;
+}
+
+.markdown a {
+	@apply underline;
+}
+
+.markdown h2 {
+	@apply text-3xl mb-7 font-black;
+}

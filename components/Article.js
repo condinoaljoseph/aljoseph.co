@@ -1,22 +1,20 @@
 import Link from 'next/link';
+import dayjs from 'dayjs';
 
-const Article = () => {
+const Article = ({ title, date, excerpt }) => {
 	return (
 		<article>
 			<header>
 				<h3 className="text-3xl mt-14 mb-2 font-black">
 					<Link href="/">
 						<a className="text-pink-600 dark:text-pink-400" href="#">
-							Lorem ipsum dolor sit.
+							{title}
 						</a>
 					</Link>
 				</h3>
-				<small>July 13, 2020 • ☕️ 1 min read</small>
+				<small>{dayjs(date).format('MMM DD YYYY')} • ☕️ 1 min read</small>
 			</header>
-			<p className="mb-7">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-				dictum.
-			</p>
+			<p className="mb-7">{excerpt}</p>
 		</article>
 	);
 };

@@ -1,5 +1,5 @@
 .markdown {
-	/* @apply leading-relaxed; */
+	@apply mt-7;
 }
 
 .markdown p,

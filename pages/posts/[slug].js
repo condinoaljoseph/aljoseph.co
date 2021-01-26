@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Container from '../../components/Container';
 import Header from '../../components/Header';
 import Aside from '../../components/Aside';
@@ -19,6 +20,13 @@ export default function Post({ post }) {
 						{dayjs(post.date).format('MMM DD YYYY')} • ☕️ 1 min read
 					</p>
 				</header>
+				<Image
+					src={post.coverImage}
+					alt={`Cover image for ${post.title}`}
+					layout="responsive"
+					width={1240}
+					height={620}
+				/>
 				<article
 					className={styles.markdown}
 					dangerouslySetInnerHTML={{ __html: post.content }}
@@ -34,6 +42,7 @@ export async function getStaticProps({ params }) {
 		'excerpt',
 		'date',
 		'slug',
+		'coverImage',
 		'content'
 	]);
 	const content = await markdownToHtml(post.content || '');

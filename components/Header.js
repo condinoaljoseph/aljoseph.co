@@ -9,7 +9,7 @@ const Header = () => {
 		<header className="flex justify-between items-center mb-10">
 			<h1>
 				<Link href="/">
-					<a className="text-3xl font-black">aljoseph.</a>
+					<a className="text-3xl font-black">elpmid.</a>
 				</Link>
 			</h1>
 			<Switch

@@ -5,6 +5,7 @@ import Main from '../../components/Main';
 import { getAllPosts, getPostBySlug } from '../../utils/api';
 import markdownToHtml from '../../utils/markdownToHtml';
 import styles from '../../components/markdown-styles.module.css';
+import dayjs from 'dayjs';
 
 export default function Post({ post }) {
 	return (
@@ -12,6 +13,12 @@ export default function Post({ post }) {
 			<Header />
 			<Aside />
 			<Main>
+				<header>
+					<h1 className="mb-7 mt-14 text-4xl font-black">{post.title}</h1>
+					<p className="text-sm leading-7 mb-7 -mt-6">
+						{dayjs(post.date).format('MMM DD YYYY')} • ☕️ 1 min read
+					</p>
+				</header>
 				<article
 					className={styles.markdown}
 					dangerouslySetInnerHTML={{ __html: post.content }}

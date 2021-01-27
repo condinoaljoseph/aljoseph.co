@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const Aside = () => {
@@ -13,12 +14,14 @@ const Aside = () => {
 				</div>
 			)}
 			<div className="flex mb-14 items-center">
-				<img
-					src="https://pbs.twimg.com/profile_images/1234630674138587136/0GlknSwT_400x400.jpg"
+				<Image
+					src="/assets/author/aljoseph.jpg"
 					alt="Al Joseph Condino"
-					className="mr-3.5 w-14 h-14 rounded-full"
+					width={56}
+					height={56}
+					className=" rounded-full"
 				/>
-				<p className="max-w-xs">
+				<p className="ml-3.5 max-w-xs">
 					Personal blog by{' '}
 					<a
 						className="text-pink-500 dark:text-pink-300 underline"

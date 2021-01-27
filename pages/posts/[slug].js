@@ -12,7 +12,6 @@ export default function Post({ post }) {
 	return (
 		<Container>
 			<Header />
-			<Aside />
 			<Main>
 				<header>
 					<h1 className="mb-7 mt-14 text-4xl font-black">{post.title}</h1>
@@ -32,6 +31,7 @@ export default function Post({ post }) {
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				></article>
 			</Main>
+			<Aside />
 		</Container>
 	);
 }

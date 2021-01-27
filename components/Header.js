@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Switch from 'react-switch';
+import Logo from './Logo';
 import { useTheme } from '../utils/themeContext';
 
 const Header = () => {
@@ -7,11 +7,7 @@ const Header = () => {
 
 	return (
 		<header className="flex justify-between items-center mb-10">
-			<h1>
-				<Link href="/">
-					<a className="text-3xl font-black">elpmid.</a>
-				</Link>
-			</h1>
+			<Logo />
 			<Switch
 				checked={theme}
 				checkedIcon={false}

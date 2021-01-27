@@ -1,6 +1,17 @@
+import Logo from './Logo';
+import { useRouter } from 'next/router';
+
 const Aside = () => {
+	const router = useRouter();
+	const isIndex = router.pathname === '/';
+
 	return (
 		<aside>
+			{!isIndex && (
+				<div className="mb-7">
+					<Logo />
+				</div>
+			)}
 			<div className="flex mb-14 items-center">
 				<img
 					src="https://pbs.twimg.com/profile_images/1234630674138587136/0GlknSwT_400x400.jpg"

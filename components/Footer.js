@@ -10,7 +10,7 @@ const Footer = () => {
 			>
 				twitter
 			</a>{' '}
-			•{' '}
+			&bull;{' '}
 			<a
 				className="text-pink-500 dark:text-pink-300 underline"
 				href="https://github.com/condinoaljoseph"
@@ -18,7 +18,7 @@ const Footer = () => {
 			>
 				github
 			</a>{' '}
-			•{' '}
+			&bull;{' '}
 			<a
 				className="text-pink-500 dark:text-pink-300 underline"
 				href="https://stackoverflow.com/users/9043355/elpmid"

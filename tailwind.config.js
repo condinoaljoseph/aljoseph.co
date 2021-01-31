@@ -1,8 +1,12 @@
 module.exports = {
 	purge: ['./pages/**/*.js', './components/**/*.js'],
-	darkMode: 'class', // or 'media' or 'class'
+	darkMode: 'class',
 	theme: {
-		extend: {}
+		extend: {},
+		fontFamily: {
+			sans: ['montserrat', 'ui-sans-serif', 'Georgia'],
+			serif: ['charter', 'ui-serif', 'system-ui']
+		}
 	},
 	variants: {
 		extend: {}

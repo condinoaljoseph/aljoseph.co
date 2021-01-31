@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'charter';
+	src: url('./charter/charter_regular-webfont.woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'charter';
+	src: url(./charter/charter_italic-webfont.woff2);
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'charter';
+	src: url(./charter/charter_bold-webfont.woff2);
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'charter';
+	src: url(./charter/charter_bold_italic-webfont.woff2);
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* montserrat */
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-400-l.woff2);
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-500-l.woff2);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-600-l.woff2);
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-700-l.woff2);
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-800-l.woff2);
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(./montserrat/montserrat-900-l.woff2);
+	font-weight: 900;
+	font-style: normal;
+}

@@ -5,13 +5,13 @@ const Logo = () => {
 	const router = useRouter();
 	const isIndex = router.pathname === '/';
 	const className = isIndex
-		? `text-3xl font-black`
-		: `text-2xl font-black text-pink-600 dark:text-pink-400 leading-9`;
+		? `text-3xl`
+		: `text-2xl text-pink-600 dark:text-pink-400 leading-9`;
 
 	return (
-		<h1>
+		<h1 className="font-sans font-black">
 			<Link href="/">
-				<a className={className}>elpmid</a>
+				<a className={className}>aljoseph.co</a>
 			</Link>
 		</h1>
 	);

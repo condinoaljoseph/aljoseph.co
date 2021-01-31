@@ -13,7 +13,7 @@ const Aside = () => {
 					<Logo />
 				</div>
 			)}
-			<div className="flex mb-14 items-center">
+			<div className="flex mb-14 items-center text-lg">
 				<Image
 					src="/assets/author/aljoseph.jpg"
 					alt="Al Joseph Condino"

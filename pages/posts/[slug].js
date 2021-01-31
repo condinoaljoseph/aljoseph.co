@@ -14,7 +14,9 @@ export default function Post({ post }) {
 			<Header />
 			<Main>
 				<header>
-					<h1 className="mb-7 mt-14 text-4xl font-black">{post.title}</h1>
+					<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
+						{post.title}
+					</h1>
 					<p className="text-sm leading-7 mb-7 -mt-6">
 						{dayjs(post.date).format('MMM DD YYYY')} • ☕️ 1 min read
 					</p>

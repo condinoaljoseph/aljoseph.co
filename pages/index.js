@@ -19,7 +19,7 @@ export default function Home({ posts }) {
 					name="Description"
 					content="Personal blog by Al Joseph Condino"
 				></meta>
-				<title>elpmid.</title>
+				<title>aljoseph.co</title>
 			</Head>
 			<Container>
 				<Header />

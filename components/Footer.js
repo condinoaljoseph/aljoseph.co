@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer className="mt-20 pt-7">
+		<footer className="mt-20 pt-7 text-xl">
 			<a
 				className="text-pink-500 dark:text-pink-300 underline"
 				href="https://twitter.com/condino_aj"

@@ -3,10 +3,10 @@ import Container from '../../components/Container';
 import Header from '../../components/Header';
 import Aside from '../../components/Aside';
 import Main from '../../components/Main';
+import BlogDate from '../../components/BlogDate';
 import { getAllPosts, getPostBySlug } from '../../utils/api';
 import markdownToHtml from '../../utils/markdownToHtml';
 import styles from '../../components/markdown-styles.module.css';
-import dayjs from 'dayjs';
 
 export default function Post({ post }) {
 	return (
@@ -17,8 +17,8 @@ export default function Post({ post }) {
 					<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
 						{post.title}
 					</h1>
-					<p className="text-sm leading-7 mb-7 -mt-6">
-						{dayjs(post.date).format('MMM DD YYYY')} • ☕️ 1 min read
+					<p className="leading-7 mb-7 -mt-6">
+						<BlogDate date={post.date} minutes={4} />
 					</p>
 				</header>
 				<Image

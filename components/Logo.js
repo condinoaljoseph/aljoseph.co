@@ -6,7 +6,7 @@ const Logo = () => {
 	const isIndex = router.pathname === '/';
 	const className = isIndex
 		? `text-3xl`
-		: `text-2xl text-pink-600 dark:text-pink-400 leading-9`;
+		: `text-2xl text-pink-600 dark:text-pink-300 leading-9`;
 
 	return (
 		<h1 className="font-sans font-black">

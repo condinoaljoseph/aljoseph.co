@@ -1,16 +1,21 @@
 .markdown {
-	@apply mt-7;
+	@apply mt-7 text-xl leading-8;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
+.markdown li,
 .markdown blockquote {
 	@apply mb-7;
 }
 
+.markdown ul {
+	@apply list-outside list-disc;
+}
+
 .markdown blockquote {
-	@apply text-xl italic mr-7 mb-7 leading-7;
+	@apply mb-5 -ml-5 pl-5 border-solid border-l-4 text-2xl italic leading-9;
 }
 
 .markdown a {
@@ -19,8 +24,4 @@
 
 .markdown h2 {
 	@apply text-3xl mb-7 font-black;
-}
-
-.markdown p {
-	@apply text-xl leading-8 tracking-normal;
 }

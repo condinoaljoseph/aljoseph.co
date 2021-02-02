@@ -4,8 +4,8 @@ import Header from '../../components/Header';
 import Aside from '../../components/Aside';
 import Main from '../../components/Main';
 import BlogDate from '../../components/BlogDate';
-import { getAllPosts, getPostBySlug } from '../../utils/api';
 import markdownToHtml from '../../utils/markdownToHtml';
+import { getAllPosts, getPostBySlug } from '../../utils/api';
 import styles from '../../components/markdown-styles.module.css';
 
 export default function Post({ post }) {

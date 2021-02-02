@@ -11,7 +11,7 @@
 }
 
 .markdown ul {
-	@apply list-outside list-disc;
+	@apply list-inside list-disc;
 }
 
 .markdown blockquote {

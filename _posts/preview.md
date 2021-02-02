@@ -2,7 +2,7 @@
 title: 'Preview Mode for Static Generation'
 excerpt: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 coverImage: '/assets/blog/preview/cover.jpg'
-date: '2020-06-16T05:35:07.322Z'
+date: '2020-06-16'
 author:
   name: Joe Haddad
   picture: '/assets/blog/authors/joe.jpeg'

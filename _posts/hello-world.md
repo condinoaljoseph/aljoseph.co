@@ -2,7 +2,7 @@
 title: 'Pre-render Pages Using Next.js'
 excerpt: 'Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
 coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+date: '2020-03-16'
 author:
   name: Tim Neutkens
   picture: '/assets/blog/authors/tim.jpeg'

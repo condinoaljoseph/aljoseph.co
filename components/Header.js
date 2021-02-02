@@ -8,16 +8,18 @@ const Header = () => {
 	return (
 		<header className="flex justify-between items-center mb-10">
 			<Logo />
-			<Switch
-				checked={theme}
-				checkedIcon={false}
-				uncheckedIcon={false}
-				height={24}
-				width={50}
-				offColor={'#0f1114'}
-				onColor={'#0f1114'}
-				onChange={toggleTheme}
-			/>
+			<label>
+				<Switch
+					checked={theme}
+					checkedIcon={false}
+					uncheckedIcon={false}
+					height={24}
+					width={50}
+					offColor={'#0f1114'}
+					onColor={'#0f1114'}
+					onChange={toggleTheme}
+				/>
+			</label>
 		</header>
 	);
 };

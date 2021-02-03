@@ -35,41 +35,6 @@ export default class MyDocument extends Document {
 					/>
 					<link
 						rel="preload"
-						href="/fonts/montserrat/montserrat-400-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossorigin
-					/>
-					<link
-						rel="preload"
-						href="/fonts/montserrat/montserrat-500-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossorigin
-					/>
-					<link
-						rel="preload"
-						href="/fonts/montserrat/montserrat-600-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossorigin
-					/>
-					<link
-						rel="preload"
-						href="/fonts/montserrat/montserrat-700-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossorigin
-					/>
-					<link
-						rel="preload"
-						href="/fonts/montserrat/montserrat-800-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossorigin
-					/>
-					<link
-						rel="preload"
 						href="/fonts/montserrat/montserrat-900-l.woff2"
 						as="font"
 						type="font/woff2"

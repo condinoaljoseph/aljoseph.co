@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link href="/fonts/style.css" rel="stylesheet" />
+					<link href="/fonts/style.css" rel="preload" />
 				</Head>
 				<body>
 					<Main />

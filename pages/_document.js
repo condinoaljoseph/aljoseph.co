@@ -75,6 +75,7 @@ export default class MyDocument extends Document {
 						type="font/woff2"
 						crossorigin
 					/>
+					<link href="/fonts/style.css" rel="preload" />
 					<link href="/fonts/style.css" rel="stylesheet" />
 				</Head>
 				<body>

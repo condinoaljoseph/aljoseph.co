@@ -1,7 +1,7 @@
 @font-face {
 	font-display: swap;
 	font-family: 'charter';
-	src: url('./charter/charter_regular-webfont.woff2');
+	src: url(./charter/charter_regular-webfont.woff2);
 	font-weight: 400;
 	font-style: normal;
 }

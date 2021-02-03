@@ -14,6 +14,10 @@
 	@apply list-inside list-disc;
 }
 
+.markdown ol {
+	@apply list-inside list-decimal;
+}
+
 .markdown blockquote {
 	@apply mb-5 -ml-5 pl-5 border-solid border-l-4 text-2xl italic leading-9;
 }

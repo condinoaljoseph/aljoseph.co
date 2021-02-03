@@ -9,6 +9,7 @@ const Header = () => {
 		<header className="flex justify-between items-center mb-10">
 			<Logo />
 			<label>
+				<span className="hidden">Switch Theme</span>
 				<Switch
 					checked={theme}
 					checkedIcon={false}

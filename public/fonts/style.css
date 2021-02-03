@@ -1,4 +1,5 @@
 @font-face {
+	font-display: swap;
 	font-family: 'charter';
 	src: url('./charter/charter_regular-webfont.woff2');
 	font-weight: 400;
@@ -6,6 +7,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'charter';
 	src: url(./charter/charter_italic-webfont.woff2);
 	font-weight: 400;
@@ -13,6 +15,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'charter';
 	src: url(./charter/charter_bold-webfont.woff2);
 	font-weight: 600;
@@ -20,6 +23,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'charter';
 	src: url(./charter/charter_bold_italic-webfont.woff2);
 	font-weight: 600;
@@ -29,6 +33,7 @@
 /* montserrat */
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-400-l.woff2);
 	font-weight: 400;
@@ -36,6 +41,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-500-l.woff2);
 	font-weight: 500;
@@ -43,6 +49,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-600-l.woff2);
 	font-weight: 600;
@@ -50,6 +57,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-700-l.woff2);
 	font-weight: 700;
@@ -57,6 +65,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-800-l.woff2);
 	font-weight: 800;
@@ -64,6 +73,7 @@
 }
 
 @font-face {
+	font-display: swap;
 	font-family: 'montserrat';
 	src: url(./montserrat/montserrat-900-l.woff2);
 	font-weight: 900;

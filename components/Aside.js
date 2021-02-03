@@ -27,6 +27,7 @@ const Aside = () => {
 						className="text-pink-600 dark:text-pink-300 underline"
 						href="https://twitter.com/condino_aj"
 						target="_blank"
+						rel="noopener"
 					>
 						Al Joseph Condino
 					</a>

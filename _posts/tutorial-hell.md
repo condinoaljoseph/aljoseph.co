@@ -3,11 +3,8 @@ title: 'Escape from Tutorial Hell'
 excerpt: 'Let us get of this.'
 coverImage: '/assets/blog/tutorial-hell/cover.jpg'
 date: '2021-02-2'
-author:
-  name: JJ Kasper
-  picture: '/assets/blog/authors/jj.jpeg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/tutorial-hell/cover.jpg'
 ---
 
 Learning programming is hard, which is why tutorials are helpful to ease the learning process. However, over-dependence on them can slow your development growth.

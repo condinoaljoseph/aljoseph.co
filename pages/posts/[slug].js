@@ -9,6 +9,11 @@ import { getAllPosts, getPostBySlug } from '../../utils/api';
 import styles from '../../components/markdown-styles.module.css';
 
 export default function Post({ post }) {
+	const GITHUB_USERNAME = 'condinoaljoseph';
+	const GITHUB_REPO = 'aljoseph.co';
+
+	const githubURL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
+
 	return (
 		<Container>
 			<Header />
@@ -32,6 +37,27 @@ export default function Post({ post }) {
 					className={styles.markdown}
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				></article>
+				<footer className="mb-8">
+					<p className="text-lg">
+						<a
+							className="text-pink-600 dark:text-pink-300 underline"
+							href={githubURL}
+							target="_blank"
+							rel="noopener"
+						>
+							Discuss on Twitter
+						</a>{' '}
+						&bull;{' '}
+						<a
+							className="text-pink-600 dark:text-pink-300 underline"
+							href={githubURL}
+							target="_blank"
+							rel="noopener"
+						>
+							Edit on Github
+						</a>
+					</p>
+				</footer>
 			</Main>
 			<Aside />
 		</Container>

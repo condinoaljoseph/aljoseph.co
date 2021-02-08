@@ -1,8 +1,8 @@
 ---
-title: 'Escape from Tutorial Hell'
-excerpt: 'Let us get of this.'
+title: 'What is module bundler and why do we need this?'
+excerpt: 'Lets all understand why?'
 coverImage: '/assets/blog/tutorial-hell/cover.jpg'
-date: '2021-02-2'
+date: '2021-01-2'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'
 ---

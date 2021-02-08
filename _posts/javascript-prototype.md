@@ -1,8 +1,8 @@
 ---
-title: 'Escape from Tutorial Hell'
-excerpt: 'Let us get of this.'
+title: 'Javascript Prototype'
+excerpt: 'Sounds cool right?'
 coverImage: '/assets/blog/tutorial-hell/cover.jpg'
-date: '2021-02-2'
+date: '2021-02-5'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'
 ---

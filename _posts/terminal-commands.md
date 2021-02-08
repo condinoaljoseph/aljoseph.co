@@ -1,8 +1,8 @@
 ---
-title: 'Escape from Tutorial Hell'
-excerpt: 'Let us get of this.'
+title: 'Basic terminal commands you should know'
+excerpt: 'Save time for not using a mouse'
 coverImage: '/assets/blog/tutorial-hell/cover.jpg'
-date: '2021-02-2'
+date: '2021-01-2'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'
 ---

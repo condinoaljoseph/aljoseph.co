@@ -1,5 +1,6 @@
-import Switch from 'react-switch';
+import Image from 'next/image';
 import Logo from './Logo';
+import Toggle from './Toggle';
 import { useTheme } from '../utils/themeContext';
 
 const Header = () => {
@@ -8,19 +9,30 @@ const Header = () => {
 	return (
 		<header className="flex justify-between items-center mb-10">
 			<Logo />
-			<label>
-				<span className="hidden">Switch Theme</span>
-				<Switch
-					checked={theme}
-					checkedIcon={false}
-					uncheckedIcon={false}
-					height={24}
-					width={50}
-					offColor={'#0f1114'}
-					onColor={'#0f1114'}
-					onChange={toggleTheme}
-				/>
-			</label>
+			<Toggle
+				icons={{
+					checked: (
+						<Image
+							src="/assets/sun.png"
+							width={16}
+							height={16}
+							role="presentation"
+							style={{ pointerEvents: 'none' }}
+						/>
+					),
+					unchecked: (
+						<Image
+							src="/assets/moon.png"
+							width={16}
+							height={16}
+							role="presentation"
+							style={{ pointerEvents: 'none' }}
+						/>
+					)
+				}}
+				checked={theme}
+				onChange={toggleTheme}
+			/>
 		</header>
 	);
 };

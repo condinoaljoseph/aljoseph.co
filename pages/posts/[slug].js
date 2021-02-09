@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Container from '../../components/Container';
 import Header from '../../components/Header';
@@ -11,56 +12,61 @@ import styles from '../../components/markdown-styles.module.css';
 export default function Post({ post }) {
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
-
-	const githubURL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
+	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
 
 	return (
-		<Container>
-			<Header />
-			<Main>
-				<header>
-					<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
-						{post.title}
-					</h1>
-					<p className="leading-7 mb-7 -mt-6">
-						<BlogDate date={post.date} minutes={4} />
-					</p>
-				</header>
-				<Image
-					src={post.coverImage}
-					alt={`Cover image for ${post.title}`}
-					layout="responsive"
-					width={1240}
-					height={620}
-				/>
-				<article
-					className={styles.markdown}
-					dangerouslySetInnerHTML={{ __html: post.content }}
-				></article>
-				<footer className="mb-8">
-					<p className="text-lg">
-						<a
-							className="text-pink-600 dark:text-pink-300 underline"
-							href={githubURL}
-							target="_blank"
-							rel="noopener"
-						>
-							Discuss on Twitter
-						</a>{' '}
-						&bull;{' '}
-						<a
-							className="text-pink-600 dark:text-pink-300 underline"
-							href={githubURL}
-							target="_blank"
-							rel="noopener"
-						>
-							Edit on Github
-						</a>
-					</p>
-				</footer>
-			</Main>
-			<Aside />
-		</Container>
+		<>
+			<Head>
+				<title>{post.title}</title>
+				<meta name="description" content={post.excerpt}></meta>
+			</Head>
+			<Container>
+				<Header />
+				<Main>
+					<header>
+						<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
+							{post.title}
+						</h1>
+						<p className="leading-7 mb-7 -mt-6">
+							<BlogDate date={post.date} minutes={4} />
+						</p>
+					</header>
+					<Image
+						src={post.coverImage}
+						alt={`Cover image for ${post.title}`}
+						layout="responsive"
+						width={1240}
+						height={620}
+					/>
+					<article
+						className={styles.markdown}
+						dangerouslySetInnerHTML={{ __html: post.content }}
+					></article>
+					<footer className="mb-8">
+						<p className="text-lg">
+							<a
+								className="text-pink-700 dark:text-pink-300 underline"
+								href={GITHUB_URL}
+								target="_blank"
+								rel="noopener"
+							>
+								Discuss on Twitter
+							</a>{' '}
+							&bull;{' '}
+							<a
+								className="text-pink-700 dark:text-pink-300 underline"
+								href={GITHUB_URL}
+								target="_blank"
+								rel="noopener"
+							>
+								Edit on Github
+							</a>
+						</p>
+					</footer>
+				</Main>
+				<Aside />
+			</Container>
+		</>
 	);
 }
 

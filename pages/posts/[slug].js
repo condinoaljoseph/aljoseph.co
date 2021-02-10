@@ -45,7 +45,7 @@ export default function Post({ post }) {
 					<footer className="mb-8">
 						<p className="text-lg">
 							<a
-								className="text-pink-700 dark:text-pink-300 underline"
+								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 								href={GITHUB_URL}
 								target="_blank"
 								rel="noopener"
@@ -54,7 +54,7 @@ export default function Post({ post }) {
 							</a>{' '}
 							&bull;{' '}
 							<a
-								className="text-pink-700 dark:text-pink-300 underline"
+								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 								href={GITHUB_URL}
 								target="_blank"
 								rel="noopener"

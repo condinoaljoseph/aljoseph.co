@@ -24,7 +24,7 @@ const Aside = () => {
 				<p className="ml-3.5 max-w-xs">
 					Personal blog by{' '}
 					<a
-						className="text-pink-700 dark:text-pink-300 underline"
+						className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 						href="https://twitter.com/condino_aj"
 						target="_blank"
 						rel="noopener"

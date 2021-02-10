@@ -4,7 +4,7 @@ const Footer = () => {
 	return (
 		<footer className="mt-20 pt-7 text-xl">
 			<a
-				className="text-pink-700 dark:text-pink-300 underline"
+				className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 				href="https://twitter.com/condino_aj"
 				target="_blank"
 				rel="noopener"
@@ -13,7 +13,7 @@ const Footer = () => {
 			</a>{' '}
 			&bull;{' '}
 			<a
-				className="text-pink-700 dark:text-pink-300 underline"
+				className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 				href="https://github.com/condinoaljoseph"
 				target="_blank"
 				rel="noopener"
@@ -22,7 +22,7 @@ const Footer = () => {
 			</a>{' '}
 			&bull;{' '}
 			<a
-				className="text-pink-700 dark:text-pink-300 underline"
+				className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 				href="https://stackoverflow.com/users/9043355/elpmid"
 				target="_blank"
 				rel="noopener"

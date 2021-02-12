@@ -12,13 +12,13 @@ const Logo = () => {
 			</Link>
 		</h1>
 	) : (
-		<h3 className="font-sans font-black">
+		<h4 className="font-sans font-black">
 			<Link href="/">
 				<a className="text-2xl text-pink-600 dark:text-pink-300 leading-9">
 					aljoseph.co
 				</a>
 			</Link>
-		</h3>
+		</h4>
 	);
 };
 

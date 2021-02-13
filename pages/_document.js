@@ -40,7 +40,6 @@ export default class MyDocument extends Document {
 						type="font/woff2"
 						crossOrigin="anonymous"
 					/>
-					<link href="/fonts/style.css" rel="stylesheet" />
 				</Head>
 				<body>
 					<Main />

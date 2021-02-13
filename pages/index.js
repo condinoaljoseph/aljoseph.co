@@ -1,13 +1,13 @@
 import Head from 'next/head';
 
-import Container from '../components/Container';
-import Header from '../components/Header';
-import Aside from '../components/Aside';
-import Main from '../components/Main';
-import Article from '../components/Article';
-import Footer from '../components/Footer';
+import Container from '@/components/Container';
+import Header from '@/components/Header';
+import Aside from '@/components/Aside';
+import Main from '@/components/Main';
+import Article from '@/components/Article';
+import Footer from '@/components/Footer';
 
-import { getAllPosts } from '../utils/api';
+import { getAllPosts } from '@/utils/api';
 
 export default function Home({ posts }) {
 	return (

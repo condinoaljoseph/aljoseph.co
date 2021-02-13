@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Container from '../../components/Container';
-import Header from '../../components/Header';
-import Aside from '../../components/Aside';
-import Main from '../../components/Main';
-import BlogDate from '../../components/BlogDate';
-import markdownToHtml from '../../utils/markdownToHtml';
-import { getAllPosts, getPostBySlug } from '../../utils/api';
-import styles from '../../components/markdown-styles.module.css';
+import Container from '@/components/Container';
+import Header from '@/components/Header';
+import Aside from '@/components/Aside';
+import Main from '@/components/Main';
+import BlogDate from '@/components/BlogDate';
+import styles from '@/components/markdown-styles.module.css';
+import markdownToHtml from '@/utils/markdownToHtml';
+import { getAllPosts, getPostBySlug } from '@/utils/api';
 
 export default function Post({ post }) {
 	const GITHUB_USERNAME = 'condinoaljoseph';

@@ -10,35 +10,35 @@ export default class MyDocument extends Document {
 						href="/fonts/charter/charter_regular-webfont.woff2"
 						as="font"
 						type="font/woff2"
-						crossOrigin="true"
+						crossOrigin="anonymous"
 					/>
 					<link
 						rel="preload"
 						href="/fonts/charter/charter_italic-webfont.woff2"
 						as="font"
 						type="font/woff2"
-						crossOrigin="true"
+						crossOrigin="anonymous"
 					/>
 					<link
 						rel="preload"
 						href="/fonts/charter/charter_bold-webfont.woff2"
 						as="font"
 						type="font/woff2"
-						crossOrigin="true"
+						crossOrigin="anonymous"
 					/>
 					<link
 						rel="preload"
 						href="/fonts/charter/charter_bold_italic-webfont.woff2"
 						as="font"
 						type="font/woff2"
-						crossOrigin="true"
+						crossOrigin="anonymous"
 					/>
 					<link
 						rel="preload"
 						href="/fonts/montserrat/montserrat-900-l.woff2"
 						as="font"
 						type="font/woff2"
-						crossOrigin="true"
+						crossOrigin="anonymous"
 					/>
 					<link href="/fonts/style.css" rel="stylesheet" />
 				</Head>

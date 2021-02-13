@@ -59,8 +59,8 @@ const Signup = () => {
 								<input
 									type="email"
 									name="email_address"
-									aria-label="Your first name"
-									placeholder="Your first name"
+									aria-label="Your email"
+									placeholder="Your email"
 									className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-9000 focus:outline-none"
 									required
 								/>

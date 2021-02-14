@@ -13,7 +13,7 @@ const Header = () => {
 				icons={{
 					checked: (
 						<Image
-							src="/assets/sun.png"
+							src="/assets/moon.png"
 							width={16}
 							height={16}
 							role="presentation"
@@ -22,7 +22,7 @@ const Header = () => {
 					),
 					unchecked: (
 						<Image
-							src="/assets/moon.png"
+							src="/assets/sun.png"
 							width={16}
 							height={16}
 							role="presentation"

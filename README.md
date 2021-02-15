@@ -1,6 +1,17 @@
-## Are you an open-sourcerer?
+# aljoseph.co
+
+Personal blogs and portfolio. Just for fun and my hobby of coding. From static HTML site to client side rendered portfolio and finally using Nextjs.
+
+I will make an archive of my portfolio history in this repo. I thinking of it. Well if you're interested checkout the projects for my roadmap.
+
+### Are you an open-sourcerer?
 
 Feel free to forked and clone this repository
+
+```bash
+$ git clone git@github.com:condinoaljoseph/aljoseph.co.git
+$ cd aljoseph.co
+```
 
 ### Run the development server
 
@@ -10,7 +21,7 @@ npm run dev
 yarn dev
 ```
 
-- Open [http://localhost:3000](http://localhost:3000) with your browser
+Open [http://localhost:3000](http://localhost:3000) with your browser
 
 ### Built using
 

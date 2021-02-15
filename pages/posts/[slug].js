@@ -5,11 +5,12 @@ import Header from '@/components/Header';
 import Aside from '@/components/Aside';
 import Main from '@/components/Main';
 import BlogDate from '@/components/BlogDate';
+import Pagination from '@/components/Pagination';
 import styles from '@/components/markdown-styles.module.css';
 import markdownToHtml from '@/utils/markdownToHtml';
-import { getAllPosts, getPostBySlug } from '@/utils/api';
+import { getAllPosts, getPostBySlug, getPagination } from '@/utils/api';
 
-export default function Post({ post }) {
+export default function Post({ post, pagination }) {
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
@@ -65,6 +66,7 @@ export default function Post({ post }) {
 					</footer>
 				</Main>
 				<Aside />
+				<Pagination pagination={pagination} />
 			</Container>
 		</>
 	);
@@ -80,12 +82,17 @@ export async function getStaticProps({ params }) {
 		'content'
 	]);
 	const content = await markdownToHtml(post.content || '');
+	const { prevPage, nextPage } = getPagination(params.slug);
 
 	return {
 		props: {
 			post: {
 				...post,
 				content
+			},
+			pagination: {
+				prevPage,
+				nextPage
 			}
 		}
 	};

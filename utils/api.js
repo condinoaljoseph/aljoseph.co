@@ -41,3 +41,30 @@ export function getAllPosts(fields = []) {
 
 	return posts;
 }
+
+export function getPagination(pageSlug) {
+	const posts = getAllPosts(['slug', 'date']).map(({ slug }) => slug);
+	const totalPages = posts.length;
+	const current = posts.indexOf(pageSlug) + 1;
+
+	let prev = undefined;
+	let next = undefined;
+	if (totalPages > 1) {
+		if (current === 1) {
+			next = 2;
+			prev = undefined;
+		}
+		if (current > 1) {
+			next = current + 1;
+			prev = current - 1;
+		}
+		if (current === totalPages) {
+			prev = totalPages - 1;
+			next = undefined;
+		}
+	}
+	return {
+		prev: posts[prev - 1] || null,
+		next: posts[next - 1] || null
+	};
+}

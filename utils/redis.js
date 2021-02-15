@@ -1,6 +1,16 @@
 import redis from 'redis';
 
-const client = redis.createClient(6379);
+const dev = process.env.NODE_ENV !== 'production';
+
+const redisCredentials = dev
+	? 6379
+	: {
+			host: 'usw1-loyal-muskrat-30458.upstash.io',
+			port: '30458',
+			password: 'ffd60d922ec14ebea48691c3b8dac77e'
+	  };
+
+const client = redis.createClient(redisCredentials);
 client.on('error', (err) => console.log(err));
 
 export function getCache(key) {

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import { getCache, setCache } from './redis';
 
 const postDirectory = join(process.cwd(), '_posts');
 
@@ -42,10 +43,16 @@ export function getAllPosts(fields = []) {
 	return posts;
 }
 
-export function getPagination(pageSlug) {
-	const posts = getAllPosts(['slug', 'date', 'title']);
-	const slugs = posts.map(({ slug }) => slug);
-	const postsTitle = posts.map(({ title }) => title);
+export async function getPagination(pageSlug) {
+	let posts = await getCache('posts');
+
+	if (posts === null) {
+		posts = getAllPosts(['slug', 'date', 'title']);
+		setCache('posts', posts);
+	}
+
+	const slugs = posts && posts.map(({ slug }) => slug);
+	const postsTitle = posts && posts.map(({ title }) => title);
 
 	const totalPages = posts.length;
 	const current = slugs.indexOf(pageSlug) + 1;

@@ -43,12 +43,16 @@ export function getAllPosts(fields = []) {
 }
 
 export function getPagination(pageSlug) {
-	const posts = getAllPosts(['slug', 'date']).map(({ slug }) => slug);
+	const posts = getAllPosts(['slug', 'date', 'title']);
+	const slugs = posts.map(({ slug }) => slug);
+	const postsTitle = posts.map(({ title }) => title);
+
 	const totalPages = posts.length;
-	const current = posts.indexOf(pageSlug) + 1;
+	const current = slugs.indexOf(pageSlug) + 1;
 
 	let prev = undefined;
 	let next = undefined;
+
 	if (totalPages > 1) {
 		if (current === 1) {
 			next = 2;
@@ -64,7 +68,13 @@ export function getPagination(pageSlug) {
 		}
 	}
 	return {
-		prev: posts[prev - 1] || null,
-		next: posts[next - 1] || null
+		prevPage: {
+			url: slugs[prev - 1] || null,
+			title: postsTitle[prev - 1] || null
+		},
+		nextPage: {
+			url: slugs[next - 1] || null,
+			title: postsTitle[next - 1] || null
+		}
 	};
 }

@@ -1,22 +1,26 @@
 import Link from 'next/link';
 
 const Pagination = ({ pagination }) => {
-	const { prev, next } = pagination;
+	const { prevPage, nextPage } = pagination;
 
 	return (
 		<nav>
 			<ul className="text-lg flex justify-between">
 				<li>
-					{prev && (
-						<Link as={`/posts/${prev}`} href="/posts/[slug]">
-							<a className="text-pink-600 dark:text-pink-300 ">← {prev}</a>
+					{prevPage.url && (
+						<Link as={`/posts/${prevPage.url}`} href="/posts/[slug]">
+							<a className="text-pink-600 dark:text-pink-300 ">
+								← {prevPage.title}
+							</a>
 						</Link>
 					)}
 				</li>
 				<li>
-					{next && (
-						<Link as={`/posts/${next}`} href="/posts/[slug]">
-							<a className="text-pink-600 dark:text-pink-300 ">{next} →</a>
+					{nextPage.url && (
+						<Link as={`/posts/${nextPage.url}`} href="/posts/[slug]">
+							<a className="text-pink-600 dark:text-pink-300 ">
+								{nextPage.title} →
+							</a>
 						</Link>
 					)}
 				</li>

@@ -82,7 +82,7 @@ export async function getStaticProps({ params }) {
 		'content'
 	]);
 	const content = await markdownToHtml(post.content || '');
-	const { prev, next } = getPagination(params.slug);
+	const { prevPage, nextPage } = getPagination(params.slug);
 
 	return {
 		props: {
@@ -91,8 +91,8 @@ export async function getStaticProps({ params }) {
 				content
 			},
 			pagination: {
-				prev,
-				next
+				prevPage,
+				nextPage
 			}
 		}
 	};

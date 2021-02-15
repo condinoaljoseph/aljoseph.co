@@ -1,5 +1,4 @@
 import redis from 'redis';
-
 const dev = process.env.NODE_ENV !== 'production';
 
 const redisCredentials = dev
@@ -13,6 +12,8 @@ const redisCredentials = dev
 const client = redis.createClient(redisCredentials);
 client.on('error', (err) => console.log(err));
 
+console.log(redisCredentials);
+
 export function getCache(key) {
 	return new Promise((resolve, reject) => {
 		client.get(key, (err, data) => {
@@ -21,11 +22,13 @@ export function getCache(key) {
 				return;
 			}
 
+			console.log(data, '@@@@@@@@@@@');
 			resolve(JSON.parse(data));
 		});
 	});
 }
 
 export function setCache(key, value) {
+	console.log(value, '@@@@@@@@@@@');
 	client.setex(key, 3600, JSON.stringify(value));
 }

@@ -4,9 +4,9 @@ const dev = process.env.NODE_ENV !== 'production';
 const redisCredentials = dev
 	? 6379
 	: {
-			host: 'usw1-loyal-muskrat-30458.upstash.io',
-			port: '30458',
-			password: 'ffd60d922ec14ebea48691c3b8dac77e'
+			host: process.env.REDIS_HOST,
+			port: process.env.REDIS_PORT,
+			password: process.env.PASSWORD
 	  };
 
 const client = redis.createClient(redisCredentials);

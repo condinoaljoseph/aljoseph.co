@@ -34,23 +34,34 @@ export function getPostBySlug(slug, fields = []) {
 	return items;
 }
 
-export function getAllPosts(fields = []) {
-	const slugs = getPostSlugs();
-	const posts = slugs
-		.map((slug) => getPostBySlug(slug, fields))
-		.sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'));
+export async function getAllPosts(fields = []) {
+	const defaultFields = [
+		'title',
+		'excerpt',
+		'date',
+		'data',
+		'slug',
+		'author',
+		'content',
+		...fields
+	];
+
+	let posts = await getCache('posts');
+
+	if (posts === null) {
+		const slugs = getPostSlugs();
+		posts = slugs
+			.map((slug) => getPostBySlug(slug, defaultFields))
+			.sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'));
+
+		setCache('posts', posts);
+	}
 
 	return posts;
 }
 
 export async function getPagination(pageSlug) {
-	let posts = await getCache('posts');
-
-	if (posts === null) {
-		posts = getAllPosts(['slug', 'date', 'title']);
-		setCache('posts', posts);
-	}
-
+	const posts = await getAllPosts();
 	const slugs = posts && posts.map(({ slug }) => slug);
 	const postsTitle = posts && posts.map(({ title }) => title);
 

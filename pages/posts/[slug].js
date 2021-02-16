@@ -42,7 +42,7 @@ export default function Post({ post, pagination }) {
 					<article
 						className={styles.markdown}
 						dangerouslySetInnerHTML={{ __html: post.content }}
-					></article>
+					/>
 					<footer className="mb-8">
 						<p className="text-lg">
 							<a

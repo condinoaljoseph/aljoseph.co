@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import Logo from './Logo';
 import Toggle from './Toggle';
-import { useTheme } from '../utils/themeContext';
+import { useTheme } from 'next-themes';
 
 const Header = () => {
-	const { toggleTheme, theme } = useTheme();
+	const { setTheme, theme } = useTheme();
 
 	return (
 		<header className="flex justify-between items-center mb-10">
 			<Logo />
+			{theme === undefined ? null : (
+
 			<Toggle
 				icons={{
 					checked: (
@@ -30,9 +32,10 @@ const Header = () => {
 						/>
 					)
 				}}
-				checked={theme}
-				onChange={toggleTheme}
+				checked={theme === 'dark'}
+				onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 			/>
+			)}
 		</header>
 	);
 };

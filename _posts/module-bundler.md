@@ -1,7 +1,7 @@
 ---
 title: 'What is module bundler and why do we need this?'
 excerpt: 'Lets all understand why?'
-coverImage: '/assets/blog/tutorial-hell/cover.jpg'
+coverImage: 'https://cdn2.whatoplay.com/ui/cyberpunk-2077.jpg'
 date: '2021-01-2'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'

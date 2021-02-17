@@ -3,8 +3,7 @@ title: 'What is module bundler and why do we need this?'
 excerpt: 'Lets all understand why?'
 coverImage: 'https://cdn2.whatoplay.com/ui/cyberpunk-2077.jpg'
 date: '2021-01-2'
-ogImage:
-  url: '/assets/blog/tutorial-hell/cover.jpg'
+ogImage: 'https://cdn2.whatoplay.com/ui/cyberpunk-2077.jpg'
 ---
 
 Learning programming is hard, which is why tutorials are helpful to ease the learning process. However, over-dependence on them can slow your development growth.

@@ -3,8 +3,7 @@ title: 'Nextjs CSR, SSR, SSG'
 excerpt: 'What are those?'
 coverImage: '/assets/blog/tutorial-hell/cover.jpg'
 date: '2021-01-2'
-ogImage:
-  url: '/assets/blog/tutorial-hell/cover.jpg'
+ogImage: '/assets/blog/tutorial-hell/cover.jpg'
 ---
 
 Learning programming is hard, which is why tutorials are helpful to ease the learning process. However, over-dependence on them can slow your development growth.

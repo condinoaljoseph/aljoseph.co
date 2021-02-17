@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Container from '@/components/Container';
 import Header from '@/components/Header';
 import Aside from '@/components/Aside';
@@ -11,6 +12,7 @@ import markdownToHtml from '@/utils/markdownToHtml';
 import { getAllPosts, getPostBySlug, getPagination } from '@/utils/api';
 
 export default function Post({ post, pagination }) {
+	const router = useRouter();
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
@@ -19,7 +21,25 @@ export default function Post({ post, pagination }) {
 		<>
 			<Head>
 				<title>{post.title}</title>
+				<link
+					rel="canonical"
+					href={`https://aljoseph.vercel.app${router.asPath}`}
+				/>
 				<meta name="description" content={post.excerpt}></meta>
+				<meta
+					property="og:url"
+					content={`https://aljoseph.vercel.app${router.asPath}`}
+				/>
+				<meta property="og:title" content={post.title} />
+				<meta property="og:image" content={post.ogImage} />
+				<meta property="og:type" content="website" />
+				<meta property="og:site_name" content="Al Joseph Condino" />
+				<meta property="og:description" content={post.excerpt} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@condino_aj" />
+				<meta name="twitter:title" content={post.title} />
+				<meta name="twitter:description" content={post.excerpt} />
+				<meta name="twitter:image" content={post.ogImage} />
 			</Head>
 			<Container>
 				<Header />
@@ -79,7 +99,8 @@ export async function getStaticProps({ params }) {
 		'date',
 		'slug',
 		'coverImage',
-		'content'
+		'content',
+		'ogImage'
 	]);
 	const content = await markdownToHtml(post.content || '');
 	const { prevPage, nextPage } = await getPagination(params.slug);

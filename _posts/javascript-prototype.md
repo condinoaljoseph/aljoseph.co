@@ -3,8 +3,7 @@ title: 'Javascript Prototype'
 excerpt: 'Sounds cool right?'
 coverImage: 'https://game-critic-review-screenshots.s3-us-west-2.amazonaws.com/webp/100087.webp'
 date: '2021-02-5'
-ogImage:
-  url: '/assets/blog/tutorial-hell/cover.jpg'
+ogImage: 'https://game-critic-review-screenshots.s3-us-west-2.amazonaws.com/webp/100087.webp'
 ---
 
 Learning programming is hard, which is why tutorials are helpful to ease the learning process. However, over-dependence on them can slow your development growth.

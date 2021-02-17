@@ -3,8 +3,7 @@ title: 'ACID on RDBMS'
 excerpt: 'Whut?'
 coverImage: '/assets/blog/hello-world/test.png'
 date: '2021-01-2'
-ogImage:
-  url: '/assets/blog/tutorial-hell/cover.jpg'
+ogImage: '/assets/blog/hello-world/test.png'
 ---
 
 Learning programming is hard, which is why tutorials are helpful to ease the learning process. However, over-dependence on them can slow your development growth.

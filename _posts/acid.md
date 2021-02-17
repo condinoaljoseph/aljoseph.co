@@ -1,7 +1,7 @@
 ---
 title: 'ACID on RDBMS'
 excerpt: 'Whut?'
-coverImage: '/assets/blog/tutorial-hell/cover.jpg'
+coverImage: '/assets/blog/hello-world/test.png'
 date: '2021-01-2'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'

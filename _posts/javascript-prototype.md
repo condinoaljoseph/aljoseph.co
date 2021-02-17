@@ -1,7 +1,7 @@
 ---
 title: 'Javascript Prototype'
 excerpt: 'Sounds cool right?'
-coverImage: '/assets/blog/tutorial-hell/cover.jpg'
+coverImage: 'https://game-critic-review-screenshots.s3-us-west-2.amazonaws.com/webp/100087.webp'
 date: '2021-02-5'
 ogImage:
   url: '/assets/blog/tutorial-hell/cover.jpg'

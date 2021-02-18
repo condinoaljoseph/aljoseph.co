@@ -2,7 +2,7 @@ const Signup = () => {
 	return (
 		<div className="font-default shadow-cm mb-10 rounded-md text-gray-900 dark:text-gray-100 dark:bg-gray-800">
 			<form action="#">
-				<div className="grid grid-cols-2">
+				<div className="grid lg:grid-cols-2">
 					<div className="p-12 bg-gray-100 dark:bg-gray-700 rounded-tl-md rounded-bl-md">
 						<h3 className="text-xl font-black leading-6 mb-5">
 							Subscribe to the Newsletter

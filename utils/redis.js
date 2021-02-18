@@ -4,8 +4,8 @@ const dev = process.env.NODE_ENV !== 'production';
 const redisCredentials = dev
 	? 6379
 	: {
-			url: process.env.REDIS_URL
-	  };
+		url: process.env.REDIS_URL
+	};
 
 const client = redis.createClient(redisCredentials);
 client.on('error', (err) => console.log(err));

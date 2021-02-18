@@ -25,7 +25,7 @@ export default function Post({ post, pagination }) {
 					rel="canonical"
 					href={`https://aljoseph.vercel.app${router.asPath}`}
 				/>
-				<meta name="description" content={post.excerpt}></meta>
+				<meta name="description" content={post.excerpt} />
 				<meta
 					property="og:url"
 					content={`https://aljoseph.vercel.app${router.asPath}`}
@@ -52,18 +52,20 @@ export default function Post({ post, pagination }) {
 							<BlogDate date={post.date} minutes={4} />
 						</p>
 					</header>
-					<Image
-						src={post.coverImage}
-						alt={`Cover image for ${post.title}`}
-						layout="responsive"
-						width={1240}
-						height={620}
-					/>
+					{post.coverImage && (
+						<Image
+							src={post.coverImage}
+							alt={`Cover image for ${post.title}`}
+							layout="responsive"
+							width={1240}
+							height={620}
+						/>
+					)}
 					<article
 						className={styles.markdown}
 						dangerouslySetInnerHTML={{ __html: post.content }}
 					/>
-					<footer className="mb-8">
+					<footer className="mb-8 mt-6">
 						<p className="text-lg">
 							<a
 								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"

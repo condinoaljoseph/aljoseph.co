@@ -2,7 +2,7 @@
 
 Personal blogs and portfolio. Just for fun and my hobby of coding. From static HTML site to client side rendered portfolio and finally using Nextjs.
 
-I will make an archive of my portfolio history in this repo. I thinking of it. Well if you're interested checkout the projects for my roadmap. Inspired from dan's iconic [overreacted.io](https://overreacted.io/) and [leerob](https://leerob.io/).
+I will make an archive of my portfolio history in this repo. I am thinking of it. Well if you're interested checkout the projects for my roadmap. Inspired from dan's iconic [overreacted.io](https://overreacted.io/) and [leerob](https://leerob.io/).
 
 ### Are you an open-sourcerer?
 

@@ -8,7 +8,7 @@ const Logo = () => {
 	return isIndex ? (
 		<h1 className="font-sans font-black">
 			<Link href="/">
-				<a className="text-3xl">aljoseph.co</a>
+				<a className="text-3xl text-gray-900">aljoseph.co</a>
 			</Link>
 		</h1>
 	) : (

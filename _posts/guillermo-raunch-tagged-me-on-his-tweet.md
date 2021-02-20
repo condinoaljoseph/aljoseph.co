@@ -1,6 +1,6 @@
 ---
 title: 'Guillermo Raunch tagged me on his tweet'
-excerpt: 'Yeah. He is the CEO of Vercel creator of Next JS'
+excerpt: 'The CEO of Vercel and co-creator of Next JS noticed my portfolio'
 date: '2021-02-18'
 ogImage: '/assets/blog/hello-world/test.png'
 ---

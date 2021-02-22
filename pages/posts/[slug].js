@@ -52,15 +52,6 @@ export default function Post({ post, pagination }) {
 							<BlogDate date={post.date} minutes={4} />
 						</p>
 					</header>
-					{post.coverImage && (
-						<Image
-							src={post.coverImage}
-							alt={`Cover image for ${post.title}`}
-							layout="responsive"
-							width={1240}
-							height={620}
-						/>
-					)}
 					<article
 						className={styles.markdown}
 						dangerouslySetInnerHTML={{ __html: post.content }}
@@ -100,7 +91,6 @@ export async function getStaticProps({ params }) {
 		'excerpt',
 		'date',
 		'slug',
-		'coverImage',
 		'content',
 		'ogImage'
 	]);

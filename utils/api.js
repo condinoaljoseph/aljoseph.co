@@ -47,7 +47,7 @@ export function getAllPosts() {
 	}, []);
 }
 
-export async function getPagination(pageSlug) {
+export function getPagination(pageSlug) {
 	const slugs = posts && posts.map(({ slug }) => slug);
 	const postsTitle = posts && posts.map(({ title }) => title);
 

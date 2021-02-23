@@ -12,7 +12,7 @@ import MDXComponents from '@/components/MDXComponents';
 import styles from '@/components/markdown-styles.module.css';
 
 import { posts } from '../../posts.json';
-import { getPostBySlug, getPagination } from '@/utils/api';
+import { getPostBySlug, getPagination } from '../../utils/api';
 
 export default function Post({ post, pagination }) {
 	const router = useRouter();
@@ -91,7 +91,7 @@ export default function Post({ post, pagination }) {
 
 export async function getStaticProps({ params }) {
 	const post = await getPostBySlug(params.slug);
-	const { prevPage, nextPage } = await getPagination(params.slug);
+	const { prevPage, nextPage } = getPagination(params.slug);
 
 	return {
 		props: {
@@ -104,7 +104,7 @@ export async function getStaticProps({ params }) {
 	};
 }
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
 	return {
 		paths: posts.map((post) => {
 			return {

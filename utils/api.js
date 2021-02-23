@@ -48,8 +48,8 @@ export function getAllPosts() {
 }
 
 export function getPagination(pageSlug) {
-	const slugs = posts && posts.map(({ slug }) => slug);
-	const postsTitle = posts && posts.map(({ title }) => title);
+	const slugs = posts.map(({ slug }) => slug);
+	const postsTitle = posts.map(({ title }) => title);
 
 	const totalPages = posts.length;
 	const current = slugs.indexOf(pageSlug) + 1;

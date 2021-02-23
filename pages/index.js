@@ -7,7 +7,7 @@ import Main from '@/components/Main';
 import Article from '@/components/Article';
 import Footer from '@/components/Footer';
 
-import { getAllPosts } from '@/utils/api';
+import { posts } from '../posts.json';
 
 export default function Home({ posts }) {
 	return (
@@ -55,8 +55,6 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-	const posts = await getAllPosts();
-
 	return {
 		props: { posts }
 	};

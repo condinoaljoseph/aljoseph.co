@@ -1,15 +1,18 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
+import hydrate from 'next-mdx-remote/hydrate';
+
 import Container from '@/components/Container';
 import Header from '@/components/Header';
 import Aside from '@/components/Aside';
 import Main from '@/components/Main';
 import BlogDate from '@/components/BlogDate';
 import Pagination from '@/components/Pagination';
+import MDXComponents from '@/components/MDXComponents';
 import styles from '@/components/markdown-styles.module.css';
-import markdownToHtml from '@/utils/markdownToHtml';
-import { getAllPosts, getPostBySlug, getPagination } from '@/utils/api';
+
+import { posts } from '../../posts.json';
+import { getPostBySlug, getPagination } from '@/utils/api';
 
 export default function Post({ post, pagination }) {
 	const router = useRouter();
@@ -17,45 +20,46 @@ export default function Post({ post, pagination }) {
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
 
+	const content = hydrate(post.mdxSource, {
+		components: MDXComponents
+	});
+
 	return (
 		<>
 			<Head>
-				<title>{post.title}</title>
+				<title>{post.frontMatter.title}</title>
 				<link
 					rel="canonical"
 					href={`https://aljoseph.vercel.app${router.asPath}`}
 				/>
-				<meta name="description" content={post.excerpt} />
+				<meta name="description" content={post.frontMatter.excerpt} />
 				<meta
 					property="og:url"
 					content={`https://aljoseph.vercel.app${router.asPath}`}
 				/>
-				<meta property="og:title" content={post.title} />
-				<meta property="og:image" content={post.ogImage} />
+				<meta property="og:title" content={post.frontMatter.title} />
+				<meta property="og:image" content={post.frontMatter.ogImage} />
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Al Joseph Condino" />
-				<meta property="og:description" content={post.excerpt} />
+				<meta property="og:description" content={post.frontMatter.excerpt} />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@condino_aj" />
-				<meta name="twitter:title" content={post.title} />
-				<meta name="twitter:description" content={post.excerpt} />
-				<meta name="twitter:image" content={post.ogImage} />
+				<meta name="twitter:title" content={post.frontMatter.title} />
+				<meta name="twitter:description" content={post.frontMatter.excerpt} />
+				<meta name="twitter:image" content={post.frontMatter.ogImage} />
 			</Head>
 			<Container>
 				<Header />
 				<Main>
 					<header>
 						<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
-							{post.title}
+							{post.frontMatter.title}
 						</h1>
 						<p className="leading-7 mb-7 -mt-6">
-							<BlogDate date={post.date} minutes={4} />
+							<BlogDate date={post.frontMatter.date} minutes={4} />
 						</p>
 					</header>
-					<article
-						className={styles.markdown}
-						dangerouslySetInnerHTML={{ __html: post.content }}
-					/>
+					<article className={styles.markdown}>{content}</article>
 					<footer className="mb-8 mt-6">
 						<p className="text-lg">
 							<a
@@ -86,23 +90,12 @@ export default function Post({ post, pagination }) {
 }
 
 export async function getStaticProps({ params }) {
-	const post = getPostBySlug(params.slug, [
-		'title',
-		'excerpt',
-		'date',
-		'slug',
-		'content',
-		'ogImage'
-	]);
-	const content = await markdownToHtml(post.content || '');
+	const post = await getPostBySlug(params.slug);
 	const { prevPage, nextPage } = await getPagination(params.slug);
 
 	return {
 		props: {
-			post: {
-				...post,
-				content
-			},
+			post,
 			pagination: {
 				prevPage,
 				nextPage
@@ -112,8 +105,6 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const posts = await getAllPosts();
-
 	return {
 		paths: posts.map((post) => {
 			return {

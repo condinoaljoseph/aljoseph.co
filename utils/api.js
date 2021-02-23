@@ -19,9 +19,7 @@ export async function getPostBySlug(slug) {
 	const { data, content } = matter(fileContents);
 	const mdxSource = await renderToString(content, {
 		components: MDXComponents,
-		mdxOptions: {
-			remarkPlugins: [require('remark-slug')]
-		}
+		scope: data
 	});
 
 	return {

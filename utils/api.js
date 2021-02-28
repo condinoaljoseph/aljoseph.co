@@ -1,7 +1,9 @@
 import fs from 'fs';
 import { join } from 'path';
+import renderToString from 'next-mdx-remote/render-to-string';
 import matter from 'gray-matter';
-import { getCache, setCache } from './redis';
+import MDXComponents from '@/components/MDXComponents';
+import { posts } from '../posts.json';
 
 const postDirectory = join(process.cwd(), '_posts');
 
@@ -9,61 +11,43 @@ export function getPostSlugs() {
 	return fs.readdirSync(postDirectory);
 }
 
-export function getPostBySlug(slug, fields = []) {
+export async function getPostBySlug(slug) {
 	const realSlug = slug.replace(/\.mdx$/, '');
 	const fullPath = join(postDirectory, `${realSlug}.mdx`);
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
+
 	const { data, content } = matter(fileContents);
-
-	const items = {};
-
-	fields.forEach((field) => {
-		if (field === 'slug') {
-			items[field] = realSlug;
-		}
-
-		if (field === 'content') {
-			items[field] = content;
-		}
-
-		if (data[field]) {
-			items[field] = data[field];
-		}
+	const mdxSource = await renderToString(content, {
+		components: MDXComponents,
+		scope: data
 	});
 
-	return items;
+	return {
+		mdxSource,
+		frontMatter: data
+	};
 }
 
-export async function getAllPosts(fields = []) {
-	const defaultFields = [
-		'title',
-		'excerpt',
-		'date',
-		'data',
-		'slug',
-		'author',
-		'content',
-		...fields
-	];
+export function getAllPosts() {
+	const files = fs.readdirSync(postDirectory);
 
-	let posts = await getCache('posts');
+	return files.reduce((allPosts, postSlug) => {
+		const source = fs.readFileSync(join(postDirectory, postSlug));
+		const { data } = matter(source);
 
-	if (posts === null) {
-		const slugs = getPostSlugs();
-		posts = slugs
-			.map((slug) => getPostBySlug(slug, defaultFields))
-			.sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'));
-
-		setCache('posts', posts);
-	}
-
-	return posts;
+		return [
+			{
+				...data,
+				slug: postSlug.replace('.mdx', '')
+			},
+			...allPosts
+		];
+	}, []);
 }
 
-export async function getPagination(pageSlug) {
-	const posts = await getAllPosts();
-	const slugs = posts && posts.map(({ slug }) => slug);
-	const postsTitle = posts && posts.map(({ title }) => title);
+export function getPagination(pageSlug) {
+	const slugs = posts.map(({ slug }) => slug);
+	const postsTitle = posts.map(({ title }) => title);
 
 	const totalPages = posts.length;
 	const current = slugs.indexOf(pageSlug) + 1;

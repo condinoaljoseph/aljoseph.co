@@ -1,16 +1,18 @@
 {
 	"posts": [
 		{
-			"title": "Escape from Tutorial Hell",
-			"excerpt": "Let us get of this.",
-			"date": "2021-02-2",
-			"slug": "escape-from-tutorial-hell"
+			"title": "The CEO of Vercel Noticed this Blog Site",
+			"excerpt": "Just flexing his tweet where he tagged me.",
+			"date": "2021-03-01",
+			"slug": "the-ceo-of-vercel-noticed-this-blog-site",
+			"readingTime": 2
 		},
 		{
-			"title": "Guillermo Rauch tagged me on his tweet",
-			"excerpt": "The CEO of Vercel and co-creator of Next JS noticed my portfolio.",
-			"date": "2021-02-18",
-			"slug": "guillermo-rauch-tagged-me-on-his-tweet"
+			"title": "Escape from Tutorial Hell",
+			"excerpt": "Lets get out of this.",
+			"date": "2021-03-10",
+			"slug": "escape-from-tutorial-hell",
+			"readingTime": 2
 		}
 	]
 }

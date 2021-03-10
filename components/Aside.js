@@ -19,7 +19,7 @@ const Aside = () => {
 			)}
 			<div className="flex mb-14 items-center text-lg">
 				<Image
-					src="/assets/author/aljoseph.jpg"
+					src="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
 					alt="Al Joseph Condino"
 					width={56}
 					height={56}

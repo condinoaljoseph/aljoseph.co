@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import BlogDate from './BlogDate';
 
-const Article = ({ title, date, excerpt, slug }) => {
+const Article = ({ title, date, excerpt, slug, readingTime }) => {
 	return (
 		<article>
 			<header>
@@ -10,7 +10,7 @@ const Article = ({ title, date, excerpt, slug }) => {
 						<a className="text-pink-600 dark:text-pink-300 ">{title}</a>
 					</Link>
 				</h2>
-				<BlogDate date={date} minutes={6} />
+				<BlogDate date={date} minutes={readingTime} />
 			</header>
 			<p className="mb-7 text-lg">{excerpt}</p>
 		</article>

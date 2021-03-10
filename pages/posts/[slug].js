@@ -18,7 +18,7 @@ export default function Post({ post, pagination }) {
 	const router = useRouter();
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
-	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.slug}.md`;
+	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.frontMatter.slug}.mdx`;
 
 	const content = hydrate(post.mdxSource, {
 		components: MDXComponents
@@ -56,7 +56,7 @@ export default function Post({ post, pagination }) {
 							{post.frontMatter.title}
 						</h1>
 						<p className="leading-7 mb-7 -mt-6">
-							<BlogDate date={post.frontMatter.date} minutes={4} />
+							<BlogDate date={post.frontMatter.date} minutes={2} />
 						</p>
 					</header>
 					<article className={styles.markdown}>{content}</article>

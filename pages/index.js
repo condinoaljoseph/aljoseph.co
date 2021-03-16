@@ -20,7 +20,7 @@ export default function Home({ posts }) {
 				<meta property="og:title" content="aljoseph.co" />
 				<meta
 					property="og:image"
-					content="https://pbs.twimg.com/profile_images/1353103600768098304/D75nwaE-_400x400.jpg"
+					content="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Al Joseph Condino" />
@@ -37,7 +37,7 @@ export default function Home({ posts }) {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://pbs.twimg.com/profile_images/1353103600768098304/D75nwaE-_400x400.jpg"
+					content="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
 				/>
 			</Head>
 			<Container>

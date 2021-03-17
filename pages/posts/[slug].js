@@ -19,6 +19,9 @@ export default function Post({ post, pagination }) {
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.frontMatter.slug}.mdx`;
+	const canonicalUrl = post.frontMatter.canonicalUrl
+		? post.frontMatter.canonicalUrl
+		: `https://aljoseph.co${router.asPath}`;
 
 	const content = hydrate(post.mdxSource, {
 		components: MDXComponents
@@ -28,15 +31,9 @@ export default function Post({ post, pagination }) {
 		<>
 			<Head>
 				<title>{post.frontMatter.title}</title>
-				<link
-					rel="canonical"
-					href={`https://aljoseph.vercel.app${router.asPath}`}
-				/>
+				<link rel="canonical" href={canonicalUrl} />
 				<meta name="description" content={post.frontMatter.excerpt} />
-				<meta
-					property="og:url"
-					content={`https://aljoseph.vercel.app${router.asPath}`}
-				/>
+				<meta property="og:url" content={canonicalUrl} />
 				<meta property="og:title" content={post.frontMatter.title} />
 				<meta property="og:image" content={post.frontMatter.ogImage} />
 				<meta property="og:type" content="website" />

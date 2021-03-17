@@ -1,9 +1,9 @@
 const Signup = () => {
 	return (
-		<div className="font-default shadow-cm mb-10 rounded-md text-gray-900 dark:text-gray-100 dark:bg-gray-800">
+		<div className="font-default shadow-cm mb-10 sm:rounded-md  text-gray-900 dark:text-gray-100 dark:bg-gray-800">
 			<form action="#">
-				<div className="grid grid-cols-2">
-					<div className="p-12 bg-gray-100 dark:bg-gray-700 rounded-tl-md rounded-bl-md">
+				<div className="grid sm:grid-cols-2">
+					<div className="p-12 bg-gray-100 dark:bg-gray-700 sm:rounded-tl-md sm:rounded-bl-md sm:rounded-tr-none rounded-tl-md rounded-tr-md">
 						<h3 className="text-xl font-black leading-6 mb-5">
 							Subscribe to the Newsletter
 						</h3>
@@ -51,7 +51,7 @@ const Signup = () => {
 									name="first_name"
 									aria-label="Your first name"
 									placeholder="Your first name"
-									className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-9000 focus:outline-none"
+									className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none"
 									required
 								/>
 							</div>
@@ -61,7 +61,7 @@ const Signup = () => {
 									name="email_address"
 									aria-label="Your email"
 									placeholder="Your email"
-									className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-9000 focus:outline-none"
+									className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none"
 									required
 								/>
 							</div>

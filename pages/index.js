@@ -20,7 +20,7 @@ export default function Home({ posts }) {
 				<meta property="og:title" content="aljoseph.co" />
 				<meta
 					property="og:image"
-					content="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
+					content="https://avatars.githubusercontent.com/u/41994701"
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Al Joseph Condino" />
@@ -37,7 +37,7 @@ export default function Home({ posts }) {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
+					content="https://avatars.githubusercontent.com/u/41994701"
 				/>
 			</Head>
 			<Container>

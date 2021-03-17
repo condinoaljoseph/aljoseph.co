@@ -26,16 +26,17 @@ const Aside = () => {
 					className=" rounded-full"
 				/>
 				<p className="ml-3.5 max-w-xs">
-					Personal blog by{' '}
-					<a
-						className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
-						href="https://twitter.com/condino_aj"
-						target="_blank"
-						rel="noopener"
-					>
-						Al Joseph Condino
-					</a>
-					.<span className="block">I explain with words and code.</span>
+					Personal blog by Al Joseph Condino.
+					<span className="block">
+						Web developer at{' '}
+						<a
+							className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
+							href="https://whatoplay.com/"
+						>
+							whatoplay.com
+						</a>
+						.
+					</span>
 				</p>
 			</div>
 		</aside>

@@ -19,9 +19,7 @@ export default function Post({ post, pagination }) {
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.frontMatter.slug}.mdx`;
-	const canonicalUrl = post.frontMatter.canonicalUrl
-		? post.frontMatter.canonicalUrl
-		: `https://aljoseph.co${router.asPath}`;
+	const canonicalUrl = `https://aljoseph.co${router.asPath}`;
 
 	const content = hydrate(post.mdxSource, {
 		components: MDXComponents

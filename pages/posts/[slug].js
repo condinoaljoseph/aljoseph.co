@@ -47,7 +47,7 @@ export default function Post({ post, pagination }) {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-14 text-5xl font-black font-sans">
+						<h1 className="mb-7 mt-14 sm:text-5xl text-3xl font-black font-sans">
 							{post.frontMatter.title}
 						</h1>
 						<p className="leading-7 mb-7 -mt-6">

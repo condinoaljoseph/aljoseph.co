@@ -13,6 +13,13 @@
 			"date": "2021-03-16",
 			"slug": "escape-from-tutorial-hell",
 			"readingTime": 2
+		},
+		{
+			"title": "Introduction to Functional Programming",
+			"excerpt": "The essence of pure of functions.",
+			"date": "2021-03-18",
+			"slug": "introduction-to-functional-programming",
+			"readingTime": 2
 		}
 	]
 }

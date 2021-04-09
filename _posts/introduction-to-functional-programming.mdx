@@ -1,0 +1,29 @@
+---
+title: 'Introduction to Functional Programming'
+slug: 'introduction-to-functional-programming'
+excerpt: 'The essence of pure of functions.'
+date: '2021-03-18'
+ogImage: 'https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06'
+---
+
+```js{4-5}
+class ProfilePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.showMessage = this.showMessage.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  showMessage() {
+    alert('Followed ' + this.props.user);
+  }
+
+  handleClick() {
+    setTimeout(this.showMessage, 3000);
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Follow</button>;
+  }
+}
+```

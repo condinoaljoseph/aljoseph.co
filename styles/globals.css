@@ -67,3 +67,89 @@
 		@apply list-inside list-decimal;
 	}
 }
+
+/* Code syntax highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	@apply text-gray-300;
+}
+
+.token.punctuation {
+	@apply text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	@apply text-green-300;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	@apply text-purple-300;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	@apply text-yellow-300;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	@apply text-blue-300;
+}
+
+.token.function,
+.token.class-name {
+	@apply text-pink-300;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	@apply text-yellow-300;
+}
+
+pre[class*='language-'] {
+	@apply -mx-4 p-4 bg-gray-900 rounded-md overflow-x-auto;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+	@apply text-gray-50 text-sm;
+}
+
+pre::-webkit-scrollbar {
+	display: none;
+}
+
+pre {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.remark-code-title {
+	@apply text-gray-200 px-5 py-3 border border-b-0 border-gray-700 rounded-t bg-gray-800 text-sm font-bold;
+}
+
+.remark-code-title + pre {
+	@apply mt-0 rounded-t-none;
+}
+
+.mdx-marker {
+	@apply block -mx-4 px-3 bg-blue-900 border-l-4 border-pink-300;
+}

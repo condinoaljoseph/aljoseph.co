@@ -2,6 +2,8 @@ import fs from 'fs';
 import { join } from 'path';
 import renderToString from 'next-mdx-remote/render-to-string';
 import matter from 'gray-matter';
+import mdxPrism from 'mdx-prism';
+
 import MDXComponents from '@/components/MDXComponents';
 import { posts } from '../posts.json';
 
@@ -19,7 +21,15 @@ export async function getPostBySlug(slug) {
 	const { data, content } = matter(fileContents);
 	const mdxSource = await renderToString(content, {
 		components: MDXComponents,
-		scope: data
+		scope: data,
+		mdxOptions: {
+			remarkPlugins: [
+				require('remark-autolink-headings'),
+				require('remark-slug'),
+				require('remark-code-titles')
+			],
+			rehypePlugins: [mdxPrism]
+		}
 	});
 
 	return {

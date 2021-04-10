@@ -73,11 +73,11 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	@apply text-gray-300;
+	@apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-	@apply text-gray-300;
+	@apply text-gray-700 dark:text-gray-300;
 }
 
 .token.property,
@@ -87,7 +87,7 @@
 .token.constant,
 .token.symbol,
 .token.deleted {
-	@apply text-green-300;
+	@apply text-green-700 dark:text-green-300;
 }
 
 .token.selector,
@@ -96,7 +96,7 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-	@apply text-purple-300;
+	@apply text-purple-700 dark:text-purple-300;
 }
 
 .token.operator,
@@ -104,18 +104,18 @@
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	@apply text-yellow-300;
+	@apply text-yellow-700 dark:text-yellow-300;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	@apply text-blue-300;
+	@apply text-blue-700 dark:text-blue-300;
 }
 
 .token.function,
 .token.class-name {
-	@apply text-pink-300;
+	@apply text-pink-700 dark:text-pink-300;
 }
 
 .token.regex,
@@ -125,12 +125,12 @@
 }
 
 pre[class*='language-'] {
-	@apply -mx-4 p-4 bg-gray-900 rounded-md overflow-x-auto;
+	@apply -mx-4 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
 }
 
 code[class*='language-'],
 pre[class*='language-'] {
-	@apply text-gray-50 text-sm;
+	@apply text-gray-800 dark:text-gray-50 text-sm;
 }
 
 pre::-webkit-scrollbar {
@@ -143,7 +143,7 @@ pre {
 }
 
 .remark-code-title {
-	@apply text-gray-200 px-5 py-3 border border-b-0 border-gray-700 rounded-t bg-gray-800 text-sm font-bold;
+	@apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-bold;
 }
 
 .remark-code-title + pre {
@@ -151,5 +151,5 @@ pre {
 }
 
 .mdx-marker {
-	@apply block -mx-4 px-3 bg-blue-900 border-l-4 border-pink-300;
+	@apply block -mx-4 px-3 bg-gray-100 bg-blue-100 dark:bg-blue-900 border-l-4 border-pink-700 dark:border-pink-300;
 }

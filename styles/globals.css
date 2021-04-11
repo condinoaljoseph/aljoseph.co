@@ -124,8 +124,12 @@
 	@apply text-yellow-300;
 }
 
+:not(pre[class*='language-']) > code {
+	@apply prose bg-yellow-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200;
+}
+
 pre[class*='language-'] {
-	@apply -mx-4 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
+	@apply -mx-4 mb-6 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
 }
 
 code[class*='language-'],

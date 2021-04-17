@@ -8,6 +8,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@mailchimp/mailchimp_marketing": "^3.0.40",
 		"@mapbox/rehype-prism": "^0.6.0",
 		"@mdx-js/loader": "^1.6.22",
 		"@mdx-js/react": "^1.6.22",

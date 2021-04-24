@@ -22,6 +22,16 @@ export default async (req, res) => {
 		});
 		return res.status(201).json({ error: '' });
 	} catch (error) {
+		if (error.status >= 400) {
+			const { text } = error.response;
+
+			if (text.includes('Member Exists')) {
+				return res.status(400).json({
+					error: `You're already subscribed to my mailing list.`
+				});
+			}
+		}
+
 		return res.status(500).json({ error: error.message || error.toString() });
 	}
 };

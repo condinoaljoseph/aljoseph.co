@@ -64,7 +64,7 @@
 	}
 
 	ol {
-		@apply list-inside list-decimal;
+		@apply list-outside list-decimal;
 	}
 }
 

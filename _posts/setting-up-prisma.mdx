@@ -1,0 +1,109 @@
+---
+title: 'Setting up Prisma'
+slug: 'setting-up-prisma'
+excerpt: 'Guide on adding prisma to existing project or start from scratch.'
+date: '2021-04-29'
+---
+
+Install prisma using
+
+```bash
+npm install prisma --save-dev
+```
+
+Prisma CLI to bootstrap a Prisma setup
+
+```bash
+npx prisma init
+```
+
+It will create the following files and a new `prisma` directory:
+
+- `schema.prisma`: your main configuration that contains the db schema
+- `.env`: for database credentials and sensitive info eg your connection URL
+
+To create the tables in you db use the command of Prisma CLI
+
+```bash
+npx prisma db push --preview-feature
+```
+
+To use the GUI run
+
+```bash
+npx prisma studio
+```
+
+## Installing and generating Prisma Client
+
+To access your database using prisma or any framework install the Prisma client in your app via npm
+
+```bash
+npm install @prisma/client
+```
+
+Because Prisma client is tailored to your own schema, you need to update it every time your prisma schema file is changing by running this comman
+
+```bash
+npx prisma generate
+```
+
+You will use a single `PrismaClient` instance that you can import anywhere on your app when you need it. The install will be created as `prisma.ts` inside the `lib/`
+
+To create it
+
+```bash
+mkdir lib && touch lib/prisma.ts
+```
+
+Now add the following code to this file:
+
+```jsx
+// lib/prisma.ts
+import { PrismaClient } from '@prisma/client';
+
+let prisma: PrismaClient;
+
+if (process.env.NODE_ENV === 'production') {
+	prisma = new PrismaClient();
+} else {
+	if (!global.prisma) {
+		global.prisma = new PrismaClient();
+	}
+	prisma = global.prisma;
+}
+
+export default prisma;
+```
+
+This code errors on production because of the property `prisma` does not exist on `global` to solve this issue. you can visit the this solution [here](https://github.com/nextauthjs/next-auth/issues/824#issuecomment-734800530).
+
+Now the code will be like this
+
+```jsx
+import { PrismaClient } from '@prisma/client';
+
+let prisma: PrismaClient;
+
+declare global {
+	namespace NodeJS {
+		interface Global {
+			prisma: any;
+		}
+	}
+}
+
+if (process.env.NODE_ENV === 'production') {
+	prisma = new PrismaClient();
+} else {
+	if (!global.prisma) {
+		global.prisma = new PrismaClient();
+	}
+
+	prisma = global.prisma;
+}
+
+export default prisma;
+```
+
+And your good to go.

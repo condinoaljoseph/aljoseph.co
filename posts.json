@@ -20,6 +20,13 @@
 			"date": "2021-03-18",
 			"slug": "introduction-to-functional-programming",
 			"readingTime": 2
+		},
+		{
+			"title": "Setting up Prisma",
+			"excerpt": "Guide on adding prisma to existing project or start from scratch.",
+			"date": "2021-04-29",
+			"slug": "setting-up-prisma",
+			"readingTime": 2
 		}
 	]
 }

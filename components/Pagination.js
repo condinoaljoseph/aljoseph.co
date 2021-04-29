@@ -5,7 +5,7 @@ const Pagination = ({ pagination }) => {
 
 	return (
 		<nav>
-			<ul className="text-lg flex justify-between">
+			<ul className="text-lg flex justify-between list-none">
 				<li className="pr-3">
 					{prevPage.url && (
 						<Link as={`/posts/${prevPage.url}`} href="/posts/[slug]">

@@ -66,6 +66,10 @@
 	ol {
 		@apply list-outside list-decimal;
 	}
+
+	ul {
+		@apply list-outside list-disc;
+	}
 }
 
 /* Code syntax highlighting */

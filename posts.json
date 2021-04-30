@@ -27,6 +27,13 @@
 			"date": "2021-04-29",
 			"slug": "setting-up-prisma",
 			"readingTime": 2
+		},
+		{
+			"title": "Generating RSS feed",
+			"excerpt": "Snippets for adding RSS feed on my NextJS static site.",
+			"date": "2021-04-29",
+			"slug": "generating-rss-feed",
+			"readingTime": 2
 		}
 	]
 }

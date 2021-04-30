@@ -27,7 +27,7 @@ async function generate() {
 
 			feed.item({
 				title: data.title,
-				url: 'https://aljoseph.co/' + slug.replace(/\.mdx?/, ''),
+				url: 'https://aljoseph.co/posts/' + slug.replace(/\.mdx?/, ''),
 				date: data.date,
 				description: data.excerpt
 			});

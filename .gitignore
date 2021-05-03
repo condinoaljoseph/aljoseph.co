@@ -34,4 +34,3 @@ yarn-error.log*
 .vercel
 
 public/feed.xml
-package-lock.json

@@ -13,10 +13,13 @@ export default function Home({ posts }) {
 	return (
 		<>
 			<Head>
+				<title>aljoseph.co</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
-				<meta name="Description" content="Personal blog by Al Joseph Condino" />
-				<title>aljoseph.co</title>
+				<meta
+					name="description"
+					content="Personal blog by Al Joseph Condino."
+				/>
 				<meta property="og:title" content="aljoseph.co" />
 				<meta
 					property="og:image"
@@ -26,14 +29,14 @@ export default function Home({ posts }) {
 				<meta property="og:site_name" content="Al Joseph Condino" />
 				<meta
 					property="og:description"
-					content="Personal blog by Al Joseph Condino"
+					content="Personal blog by Al Joseph Condino."
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@condino_aj" />
 				<meta name="twitter:title" content="aljoseph.co" />
 				<meta
 					name="twitter:description"
-					content="Personal blog by Al Joseph Condino"
+					content="Personal blog by Al Joseph Condino."
 				/>
 				<meta
 					name="twitter:image"

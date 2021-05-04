@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import SignupIcon from './SignupIcon';
 
 const Signup = () => {
+	const router = useRouter();
 	const [fName, setFName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
@@ -25,7 +27,7 @@ const Signup = () => {
 			return;
 		}
 
-		setMessage('Success! You are now subscribed to the newsletter.');
+		router.push('/confirm');
 	};
 
 	return (

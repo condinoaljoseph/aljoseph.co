@@ -13,7 +13,7 @@ export default function Home({ posts }) {
 	return (
 		<>
 			<Head>
-				<title>aljoseph.co</title>
+				<title>Al Joseph Condino - Developer and Writer</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
 				<meta

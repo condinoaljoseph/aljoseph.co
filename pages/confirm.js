@@ -20,8 +20,8 @@ export default function Confirm() {
 					<article className="text-xl leading-8">
 						<p>
 							Thank you for subscribing. You will need to check your inbox and
-							confirm your subscription. If you cant find email try searching
-							`aljoseph.co`.
+							confirm your subscription. If you cant find email try searching{' '}
+							<code>aljoseph.co</code>.
 						</p>
 					</article>
 				</Main>

@@ -15,13 +15,6 @@
 			"readingTime": 2
 		},
 		{
-			"title": "Introduction to Functional Programming",
-			"excerpt": "The essence of pure of functions.",
-			"date": "2021-03-18",
-			"slug": "introduction-to-functional-programming",
-			"readingTime": 2
-		},
-		{
 			"title": "Setting up Prisma",
 			"excerpt": "Guide on adding prisma to existing project or start from scratch.",
 			"date": "2021-04-29",

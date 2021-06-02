@@ -55,21 +55,21 @@
 		unicode-range: U+000-5FF; /* Latin glyphs */
 	}
 
-	a {
+	/* a {
 		@apply text-pink-700 dark:text-pink-300;
-	}
+	} */
 
-	blockquote {
+	/* blockquote {
 		@apply mb-5 -ml-5 pl-5 border-solid border-l-4 border-gray-700 dark:border-gray-300 text-2xl italic leading-9;
-	}
+	} */
 
-	ol {
+	/* ol {
 		@apply list-outside list-decimal;
-	}
+	} */
 
-	ul {
+	/* ul {
 		@apply list-outside list-disc;
-	}
+	} */
 }
 
 /* Code syntax highlighting */

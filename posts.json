@@ -27,6 +27,13 @@
 			"date": "2021-04-29",
 			"slug": "generating-rss-feed",
 			"readingTime": 2
+		},
+		{
+			"title": "Style Guide",
+			"excerpt": "Visual style guide for my blog.",
+			"date": "2021-06-02",
+			"slug": "style-guide",
+			"readingTime": 2
 		}
 	]
 }

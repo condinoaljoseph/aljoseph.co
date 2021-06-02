@@ -57,7 +57,7 @@ export default function Post({ post, tweets, pagination }) {
 							<BlogDate date={post.frontMatter.date} minutes={2} />
 						</p>
 					</header>
-					<article className="prose prose-lg dark:prose-dark">
+					<article className="prose prose-lg dark:prose-dark w-full">
 						<MDXRemote
 							{...post.mdxSource}
 							components={{ ...MDXComponents, StaticTweet }}

@@ -5,14 +5,14 @@ const Article = ({ title, date, excerpt, slug, readingTime }) => {
 	return (
 		<article>
 			<header>
-				<h2 className="text-3xl mt-14 mb-2 font-black font-sans">
+				<h2 className="text-xxl mt-10 mb-2 font-black font-sans">
 					<Link as={`/posts/${slug}`} href="/posts/[slug]">
 						<a className="text-pink-600 dark:text-pink-300 ">{title}</a>
 					</Link>
 				</h2>
 				<BlogDate date={date} minutes={readingTime} />
 			</header>
-			<p className="mb-7 text-lg">{excerpt}</p>
+			<p className="mb-7 text-base">{excerpt}</p>
 		</article>
 	);
 };

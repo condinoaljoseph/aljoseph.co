@@ -17,12 +17,12 @@ const Aside = () => {
 					</div>
 				</>
 			)}
-			<div className="flex mb-14 items-center text-lg">
+			<div className="flex mb-12 items-center text-base">
 				<Image
 					src="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
 					alt="Al Joseph Condino"
-					width={56}
-					height={56}
+					width={48}
+					height={48}
 					className=" rounded-full"
 				/>
 				<p className="ml-3.5 max-w-xs">

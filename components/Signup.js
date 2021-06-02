@@ -31,7 +31,7 @@ const Signup = () => {
 	};
 
 	return (
-		<div className="font-default shadow-cm mb-10 sm:rounded-md  text-gray-900 dark:text-gray-100 dark:bg-gray-800">
+		<div className="font-default shadow-cm mb-10 sm:rounded-md text-gray-900 dark:text-gray-100 dark:bg-gray-800">
 			<form onSubmit={subscribe}>
 				<div className="grid sm:grid-cols-2">
 					<div className="p-12 bg-gray-100 dark:bg-gray-700 sm:rounded-tl-md sm:rounded-bl-md sm:rounded-tr-none rounded-tl-md rounded-tr-md">

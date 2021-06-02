@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import { format } from 'date-fns';
 
 export function formatReadingTime(minutes) {
 	const cups = Math.round(minutes / 5);
@@ -13,5 +13,5 @@ export function formatReadingTime(minutes) {
 }
 
 export function formatPostDate(date) {
-	return dayjs(date).format('MMM DD YYYY');
+	return format(new Date(date), 'MMM d, y');
 }

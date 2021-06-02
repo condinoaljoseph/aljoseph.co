@@ -1,6 +1,6 @@
 import Head from 'next/head';
+import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
-import hydrate from 'next-mdx-remote/hydrate';
 
 import Container from '@/components/Container';
 import Header from '@/components/Header';
@@ -8,22 +8,25 @@ import Aside from '@/components/Aside';
 import Main from '@/components/Main';
 import BlogDate from '@/components/BlogDate';
 import Pagination from '@/components/Pagination';
+import Tweet from '@/components/Tweet';
 import MDXComponents from '@/components/MDXComponents';
 import styles from '@/components/markdown-styles.module.css';
 
+import { getPostBySlug, getPagination } from '@/utils/api';
+import { getTweets } from '@/utils/twitter';
 import { posts } from '../../posts.json';
-import { getPostBySlug, getPagination } from '../../utils/api';
 
-export default function Post({ post, pagination }) {
+export default function Post({ post, tweets, pagination }) {
 	const router = useRouter();
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.frontMatter.slug}.mdx`;
 	const canonicalUrl = `https://aljoseph.co${router.asPath}`;
 
-	const content = hydrate(post.mdxSource, {
-		components: MDXComponents
-	});
+	const StaticTweet = ({ id }) => {
+		const tweet = tweets.find((tweet) => tweet.id === id);
+		return <Tweet {...tweet} />;
+	};
 
 	return (
 		<>
@@ -47,16 +50,21 @@ export default function Post({ post, pagination }) {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-black font-sans">
+						<h1 className="mb-7 mt-10 sm:text-4xl text-3xl font-black font-sans">
 							{post.frontMatter.title}
 						</h1>
 						<p className="leading-7 mb-7 -mt-6">
 							<BlogDate date={post.frontMatter.date} minutes={2} />
 						</p>
 					</header>
-					<article className={styles.markdown}>{content}</article>
+					<article className="prose prose-lg dark:prose-dark">
+						<MDXRemote
+							{...post.mdxSource}
+							components={{ ...MDXComponents, StaticTweet }}
+						/>
+					</article>
 					<footer className="mb-8 mt-6">
-						<p className="text-lg">
+						<p className="text-base">
 							<a
 								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 								href={GITHUB_URL}
@@ -86,11 +94,13 @@ export default function Post({ post, pagination }) {
 
 export async function getStaticProps({ params }) {
 	const post = await getPostBySlug(params.slug);
+	const tweets = await getTweets(post.tweetIDs);
 	const { prevPage, nextPage } = getPagination(params.slug);
 
 	return {
 		props: {
 			post,
+			tweets,
 			pagination: {
 				prevPage,
 				nextPage

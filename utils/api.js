@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { join } from 'path';
-import renderToString from 'next-mdx-remote/render-to-string';
+import { serialize } from 'next-mdx-remote/serialize';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 
@@ -19,7 +19,7 @@ export async function getPostBySlug(slug) {
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
 
 	const { data, content } = matter(fileContents);
-	const mdxSource = await renderToString(content, {
+	const mdxSource = await serialize(content, {
 		components: MDXComponents,
 		scope: data,
 		mdxOptions: {
@@ -32,8 +32,12 @@ export async function getPostBySlug(slug) {
 		}
 	});
 
+	const tweetMatches = content.match(/<StaticTweet\sid="[0-9]+"\s\/>/g);
+	const tweetIDs = tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]);
+
 	return {
 		mdxSource,
+		tweetIDs: tweetIDs || [],
 		frontMatter: data
 	};
 }

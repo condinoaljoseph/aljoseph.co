@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer className="mt-20 pt-7 text-base flex justify-between">
+		<footer className="mt-18 pt-7 text-base flex justify-between">
 			<div>
 				<a
 					className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"

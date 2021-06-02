@@ -95,7 +95,7 @@ export default function Tweet({
 								height={m.height}
 								width={m.width}
 								src={m.url}
-								className="mt-2 border border-gray-100 dark:border-gray-700"
+								className="rounded-lg"
 							/>
 						))}
 					</div>

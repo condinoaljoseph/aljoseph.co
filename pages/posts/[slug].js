@@ -31,7 +31,7 @@ export default function Post({ post, tweets, pagination }) {
 	return (
 		<>
 			<Head>
-				<title>{post.frontMatter.title}</title>
+				<title>{post.frontMatter.title} - Al Joseph Condino</title>
 				<link rel="canonical" href={canonicalUrl} />
 				<meta name="description" content={post.frontMatter.excerpt} />
 				<meta property="og:url" content={canonicalUrl} />

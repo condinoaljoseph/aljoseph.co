@@ -26,7 +26,9 @@ export default function Custom404() {
 							double check that URL?
 						</p>
 						<Link href="/">
-							<a className="shadow-link hover:shadow-none">Return Home</a>
+							<a className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
+								Return Home
+							</a>
 						</Link>
 					</article>
 				</Main>

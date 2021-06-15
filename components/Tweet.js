@@ -94,6 +94,7 @@ export default function Tweet({
 								width={m.width}
 								src={m.url}
 								className="rounded-lg"
+								placeholder="blur"
 							/>
 						))}
 					</div>

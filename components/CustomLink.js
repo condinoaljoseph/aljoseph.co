@@ -1,16 +1,15 @@
 import Link from 'next/link';
 
 const CustomLink = (props) => {
-	const { href } = props;
+	const { href, children } = props;
 	const isInternalLink = href && (href.startsWith('#') || href.startsWith('/'));
 
 	if (isInternalLink) {
 		return (
 			<Link href={href}>
-				<a
-					className="no-underline text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
-					{...props}
-				/>
+				<a className="no-underline text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
+					{children}
+				</a>
 			</Link>
 		);
 	}

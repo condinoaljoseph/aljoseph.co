@@ -37,7 +37,7 @@ export default function Tweet({
 						className="no-underline flex items-center"
 						href={authorUrl}
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="noopener noreferrer noreferrer"
 					>
 						<Image
 							className="h-11 w-11 rounded-full"
@@ -95,6 +95,7 @@ export default function Tweet({
 								src={m.url}
 								className="rounded-lg"
 								placeholder="blur"
+								blurDataURL="data:image/jpeg;base64,aHR0cHM6Ly9jZG4yLndoYXRvcGxheS5jb20vdWkvcGxhY2Vob2xkZXIuanBn"
 							/>
 						))}
 					</div>
@@ -119,7 +120,7 @@ export default function Tweet({
 				<a
 					href={tweetUrl}
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener noreferrer noreferrer"
 					className="no-underline text-blue-500 dark:text-blue-400 flex mt-2"
 				>
 					<div className="flex items-center mr-4 text-pink-500 dark:text-pink-300">

@@ -15,21 +15,39 @@ export default function Custom404() {
 				<Main>
 					<header>
 						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-black font-sans">
-							451 – Unavailable For Legal Reasons
+							404 - Page not found
 						</h1>
 					</header>
 					<article className="text-xl leading-8">
-						<p className="mb-7">
-							Why show a generic 404 when I can make it sound mysterious? It
-							seems you've found something that used to exist, or you spelled
-							something wrong. I'm guessing you spelled something wrong. Can you
-							double check that URL?
+						<p className="mb-7">Why are you here? I think your lost.</p>
+						<div
+							style={{
+								width: '100%',
+								height: '0',
+								paddingBottom: '54%',
+								position: 'relative'
+							}}
+						>
+							<iframe
+								src="https://giphy.com/embed/gKsJUddjnpPG0"
+								width="100%"
+								height="100%"
+								style={{ position: 'absolute' }}
+								frameBorder="0"
+								className="giphy-embed"
+								allowFullScreen
+							></iframe>
+						</div>
+						<p>
+							<a href="https://giphy.com/gifs/gKsJUddjnpPG0">via GIPHY</a>
 						</p>
-						<Link href="/">
-							<a className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
-								Return Home
-							</a>
-						</Link>
+						<p className="mt-6">
+							<Link href="/">
+								<a className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
+									Return Home
+								</a>
+							</Link>
+						</p>
 					</article>
 				</Main>
 			</Container>

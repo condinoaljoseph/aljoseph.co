@@ -8,7 +8,7 @@ const Footer = () => {
 					className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 					href="https://twitter.com/condino_aj"
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 				>
 					twitter
 				</a>{' '}
@@ -17,7 +17,7 @@ const Footer = () => {
 					className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 					href="https://github.com/condinoaljoseph"
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 				>
 					github
 				</a>{' '}
@@ -26,7 +26,7 @@ const Footer = () => {
 					className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none justify-self-end"
 					href="https://stackoverflow.com/users/9043355/elpmid"
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 				>
 					stack overflow
 				</a>
@@ -36,7 +36,7 @@ const Footer = () => {
 					className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none justify-self-end"
 					href="https://aljoseph.co/feed.xml"
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 				>
 					rss
 				</a>

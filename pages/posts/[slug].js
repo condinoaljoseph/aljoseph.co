@@ -10,11 +10,10 @@ import BlogDate from '@/components/BlogDate';
 import Pagination from '@/components/Pagination';
 import Tweet from '@/components/Tweet';
 import MDXComponents from '@/components/MDXComponents';
-import styles from '@/components/markdown-styles.module.css';
 
 import { getPostBySlug, getPagination } from '@/utils/api';
 import { getTweets } from '@/utils/twitter';
-import { posts } from '../../posts.json';
+import { posts } from '../../posts.js';
 
 export default function Post({ post, tweets, pagination }) {
 	const router = useRouter();
@@ -69,7 +68,7 @@ export default function Post({ post, tweets, pagination }) {
 								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 								href={GITHUB_URL}
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
 								Discuss on Twitter
 							</a>{' '}
@@ -78,7 +77,7 @@ export default function Post({ post, tweets, pagination }) {
 								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
 								href={GITHUB_URL}
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
 								Edit on Github
 							</a>

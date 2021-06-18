@@ -34,5 +34,9 @@
 		"remark-slug": "^6.0.0",
 		"rss": "^1.2.2",
 		"tailwindcss": "^2.0.3"
+	},
+	"devDependencies": {
+		"eslint": "^7.28.0",
+		"eslint-config-next": "^11.0.0"
 	}
 }

@@ -31,7 +31,7 @@ export default function Tweet({
 
 	return (
 		<div className="bg-gray-50 dark:bg-gray-800 flex items-center justify-center mb-7 prose dark:prose-dark max-w-none w-full">
-			<div className="bg-white dark:bg-gray-900 dark:border-gray-900 border rounded-lg -mx-4 p-4 shadow-md">
+			<div className="bg-white dark:bg-gray-900 dark:border-gray-900 border rounded-lg p-4 shadow-md">
 				<div className="flex justify-between">
 					<a
 						className="no-underline flex items-center"
@@ -47,7 +47,7 @@ export default function Tweet({
 							height={48}
 						/>
 						<div className="ml-1.5">
-							<span className="flex items-center dark:text-white font-bold block">
+							<span className="flex items-center dark:text-white font-bold">
 								{author.name}
 
 								{author.verified ? (

@@ -54,22 +54,6 @@
 		font-style: normal;
 		unicode-range: U+000-5FF; /* Latin glyphs */
 	}
-
-	/* a {
-		@apply text-pink-700 dark:text-pink-300;
-	} */
-
-	/* blockquote {
-		@apply mb-5 -ml-5 pl-5 border-solid border-l-4 border-gray-700 dark:border-gray-300 text-2xl italic leading-9;
-	} */
-
-	/* ol {
-		@apply list-outside list-decimal;
-	} */
-
-	/* ul {
-		@apply list-outside list-disc;
-	} */
 }
 
 /* Code syntax highlighting */
@@ -133,7 +117,7 @@
 }
 
 pre[class*='language-'] {
-	@apply -mx-4 mb-6 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
+	@apply mb-6 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
 }
 
 code[class*='language-'],

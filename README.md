@@ -13,8 +13,6 @@ $ git clone git@github.com:condinoaljoseph/aljoseph.co.git
 $ cd aljoseph.co
 ```
 
-> Note: I am using redis so you must install redis for this.
-
 ### Run the development server
 
 ```bash

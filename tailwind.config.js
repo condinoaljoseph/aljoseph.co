@@ -8,6 +8,14 @@ module.exports = {
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
+						a: {
+							'color': theme('colors.pink.700'),
+							'boxShadow': '0 1px 0 0 currentColor',
+							'textDecoration': 'none',
+							'&:hover': {
+								boxShadow: 'none'
+							}
+						},
 						ol: {
 							li: {
 								'&:before': { color: theme('colors.gray.900') }
@@ -28,6 +36,9 @@ module.exports = {
 						},
 						'blockquote': {
 							color: theme('colors.gray.200')
+						},
+						'a': {
+							color: theme('colors.pink.300')
 						},
 						'ol': {
 							li: {

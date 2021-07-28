@@ -34,7 +34,7 @@ export default function Tweet({
 			<div className="bg-white dark:bg-gray-900 dark:border-gray-900 border rounded-lg p-4 shadow-md">
 				<div className="flex justify-between">
 					<a
-						className="no-underline flex items-center"
+						className="shadow-none flex items-center"
 						href={authorUrl}
 						target="_blank"
 						rel="noopener noreferrer noreferrer"
@@ -121,7 +121,7 @@ export default function Tweet({
 					href={tweetUrl}
 					target="_blank"
 					rel="noopener noreferrer noreferrer"
-					className="no-underline text-blue-500 dark:text-blue-400 flex mt-2"
+					className="shadow-none text-blue-500 dark:text-blue-400 flex mt-2"
 				>
 					<div className="flex items-center mr-4 text-pink-500 dark:text-pink-300">
 						<svg className="fill-current h-5 w-auto" viewBox="0 0 24 24">

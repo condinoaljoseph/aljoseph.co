@@ -24,8 +24,15 @@ export async function getPostBySlug(slug) {
 		scope: data,
 		mdxOptions: {
 			remarkPlugins: [
-				require('remark-autolink-headings'),
 				require('remark-slug'),
+				[
+					require('remark-autolink-headings'),
+					{
+						linkProperties: {
+							className: ['anchor', 'shadow-none']
+						}
+					}
+				],
 				require('remark-code-titles')
 			],
 			rehypePlugins: [mdxPrism]

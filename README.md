@@ -13,6 +13,16 @@ $ git clone git@github.com:condinoaljoseph/aljoseph.co.git
 $ cd aljoseph.co
 ```
 
+### Env Variables
+Create `.env.local` for environment variables. You should have a twitter api token because most of my post is using the static twitter component.
+
+```env
+TWITTER_API_TOKEN=
+MAILCHIMP_API_KEY=
+MAILCHIMP_API_SERVER=
+MAILCHIMP_AUDIENCE_ID=
+```
+
 ### Run the development server
 
 ```bash

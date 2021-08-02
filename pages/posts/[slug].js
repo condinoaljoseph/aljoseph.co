@@ -17,10 +17,13 @@ import { posts } from '../../posts.js';
 
 export default function Post({ post, tweets, pagination }) {
 	const router = useRouter();
+	const canonicalUrl = `https://aljoseph.co${router.asPath}`;
 	const GITHUB_USERNAME = 'condinoaljoseph';
 	const GITHUB_REPO = 'aljoseph.co';
 	const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/edit/master/_posts/${post.frontMatter.slug}.mdx`;
-	const canonicalUrl = `https://aljoseph.co${router.asPath}`;
+	const TWITTER_URL = `https://twitter.com/search?q=${encodeURIComponent(
+		canonicalUrl
+	)}`;
 
 	const StaticTweet = ({ id }) => {
 		const tweet = tweets.find((tweet) => tweet.id === id);
@@ -66,7 +69,7 @@ export default function Post({ post, tweets, pagination }) {
 						<p className="text-base">
 							<a
 								className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
-								href={GITHUB_URL}
+								href={TWITTER_URL}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

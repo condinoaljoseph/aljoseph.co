@@ -29,8 +29,6 @@ export default function Tweet({
 	const quoteTweet =
 		referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
-	console.log(public_metrics, 'pub');
-
 	return (
 		<div className="bg-gray-50 dark:bg-gray-800 flex items-center justify-center mb-7 prose dark:prose-dark max-w-none w-full">
 			<div className="bg-white dark:bg-gray-900 dark:border-gray-900 border rounded-lg p-4">

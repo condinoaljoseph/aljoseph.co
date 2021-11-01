@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Logo from './Logo';
 import Toggle from './Toggle';
+import Search from './Search';
 import { useTheme } from 'next-themes';
 
 const Header = () => {
@@ -35,6 +36,7 @@ const Header = () => {
 					onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 				/>
 			)}
+			<Search />
 		</header>
 	);
 };

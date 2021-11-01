@@ -35,7 +35,7 @@ const Signup = () => {
 			<form onSubmit={subscribe}>
 				<div className="grid sm:grid-cols-2">
 					<div className="p-12 bg-gray-100 dark:bg-gray-700 sm:rounded-tl-md sm:rounded-bl-md sm:rounded-tr-none rounded-tl-md rounded-tr-md">
-						<h3 className="text-xl font-black leading-6 mb-5">
+						<h3 className="text-xl font-bold leading-6 mb-5">
 							Subscribe to the Newsletter
 						</h3>
 						<p className="leading-7 mb-5">

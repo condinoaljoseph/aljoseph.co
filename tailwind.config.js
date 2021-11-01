@@ -56,9 +56,9 @@ module.exports = {
 			})
 		},
 		fontFamily: {
-			sans: ['montserrat', ...fontFamily.sans],
-			serif: ['charter', ...fontFamily.serif],
-			default: ['system-ui']
+			sans: ['Inter', ...fontFamily.sans],
+			serif: ['-apple-system,', ...fontFamily.serif],
+			mono: ['SFMono-Regular', ...fontFamily.mono]
 		},
 		fontSize: {
 			...fontSize,

@@ -6,39 +6,8 @@ export default class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					<link
-						rel="preload"
-						href="/fonts/charter/charter_regular-webfont.woff2"
-						as="font"
-						type="font/woff2"
-						crossOrigin="anonymous"
-					/>
-					<link
-						rel="preload"
-						href="/fonts/charter/charter_italic-webfont.woff2"
-						as="font"
-						type="font/woff2"
-						crossOrigin="anonymous"
-					/>
-					<link
-						rel="preload"
-						href="/fonts/charter/charter_bold-webfont.woff2"
-						as="font"
-						type="font/woff2"
-						crossOrigin="anonymous"
-					/>
-					<link
-						rel="preload"
-						href="/fonts/charter/charter_bold_italic-webfont.woff2"
-						as="font"
-						type="font/woff2"
-						crossOrigin="anonymous"
-					/>
-					<link
-						rel="preload"
-						href="/fonts/montserrat/montserrat-900-l.woff2"
-						as="font"
-						type="font/woff2"
-						crossOrigin="anonymous"
+						href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=optional"
+						rel="stylesheet"
 					/>
 				</Head>
 				<body>

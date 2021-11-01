@@ -25,7 +25,7 @@ const Aside = () => {
 					height={48}
 					className=" rounded-full"
 				/>
-				<p className="ml-3.5 max-w-xs">
+				<p className="ml-3.5 max-w-xs text-gray-700 dark:text-gray-400">
 					Personal blog by Al Joseph Condino.
 					<span className="block">
 						Web developer at{' '}

@@ -13,7 +13,7 @@ export default function Confirm() {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-black font-sans">
+						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-bold font-serif">
 							Just one more thing...
 						</h1>
 					</header>

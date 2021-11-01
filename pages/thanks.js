@@ -13,7 +13,7 @@ export default function Thanks() {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-black font-sans">
+						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-bold font-sans">
 							Thank you for subscribing
 						</h1>
 					</header>

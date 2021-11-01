@@ -6,15 +6,15 @@ const Logo = () => {
 	const isIndex = router.pathname === '/';
 
 	return isIndex ? (
-		<h1 className="font-sans font-black">
+		<h1 className="font-mono">
 			<Link href="/">
-				<a className="text-xxl text-gray-900 dark:text-gray-200">aljoseph.co</a>
+				<a className="text-xl text-gray-900 dark:text-gray-200">aljoseph.co</a>
 			</Link>
 		</h1>
 	) : (
-		<h4 className="font-sans font-black">
+		<h4 className="font-mono">
 			<Link href="/">
-				<a className="text-xxl text-pink-600 dark:text-pink-300 leading-9">
+				<a className="text-xl text-pink-600 dark:text-pink-300 leading-9">
 					aljoseph.co
 				</a>
 			</Link>

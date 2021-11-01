@@ -14,7 +14,7 @@ export default function Custom404() {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-black font-sans">
+						<h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-bold font-sans">
 							404 - Page not found
 						</h1>
 					</header>

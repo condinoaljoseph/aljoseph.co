@@ -5,7 +5,7 @@ const Article = ({ title, date, excerpt, slug, readingTime }) => {
 	return (
 		<article>
 			<header className="mb-2">
-				<h2 className="text-xxl mt-10 mb-2 font-sans font-bold">
+				<h2 className="text-xxl mt-10 mb-2 font-serif font-bold">
 					<Link as={`/posts/${slug}`} href="/posts/[slug]">
 						<a className="text-pink-600 dark:text-pink-300">{title}</a>
 					</Link>

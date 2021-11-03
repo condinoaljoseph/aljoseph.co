@@ -56,8 +56,8 @@ module.exports = {
 			})
 		},
 		fontFamily: {
-			sans: ['Inter', ...fontFamily.sans],
-			serif: ['-apple-system,', ...fontFamily.serif],
+			sans: ['-apple-system', ...fontFamily.sans],
+			serif: ['Inter', ...fontFamily.serif],
 			mono: ['SFMono-Regular', ...fontFamily.mono]
 		},
 		fontSize: {

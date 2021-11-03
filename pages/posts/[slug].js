@@ -52,7 +52,7 @@ export default function Post({ post, tweets, pagination }) {
 				<Header />
 				<Main>
 					<header>
-						<h1 className="mb-7 mt-10 sm:text-4xl text-3xl font-bold font-sans">
+						<h1 className="mb-7 mt-10 sm:text-4xl text-3xl font-bold font-serif">
 							{post.frontMatter.title}
 						</h1>
 						<p className="leading-7 mb-7 -mt-6">

@@ -41,4 +41,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 
 ### Submit pull request
 
-I will check your wonderful PR's. Power!
+I will check your wonderful PR's. Power!!!

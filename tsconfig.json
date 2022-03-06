@@ -22,7 +22,8 @@
 		"paths": {
 			"@/components/*": ["components/*"],
 			"@/utils/*": ["utils/*"],
-			"@/styles/*": ["styles/*"]
+			"@/styles/*": ["styles/*"],
+			"@/hooks/*": ["hooks/*"]
 		}
   },
   "include": [

@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.5.0",
 		"@mailchimp/mailchimp_marketing": "^3.0.40",
 		"@mapbox/rehype-prism": "^0.6.0",
 		"@mdx-js/loader": "^1.6.22",

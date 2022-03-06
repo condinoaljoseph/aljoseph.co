@@ -1,7 +1,7 @@
-import Logo from './Logo';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Logo from './Logo';
 import Signup from './Signup';
+import { useRouter } from 'next/router';
 
 const Aside = () => {
 	const router = useRouter();

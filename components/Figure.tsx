@@ -12,7 +12,6 @@ const Figure = ({ children }) => {
 	return (
 		<figure className="mb-7">
 			{children}
-			<Figcaption />
 		</figure>
 	);
 };

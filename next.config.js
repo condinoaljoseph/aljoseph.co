@@ -9,7 +9,7 @@ module.exports = withMDX({
 	},
 	webpack: (config, { isServer }) => {
 		if (isServer) {
-			require('./utils/rss');
+			require('./scripts/rss');
 		}
 
 		return config;

@@ -14,7 +14,7 @@ import MDXComponents from '@/components/MDXComponents';
 
 import { getPostBySlug, getPagination } from '@/utils/api';
 import { getTweets } from '@/utils/twitter';
-import { posts } from '../../posts.js';
+import { posts } from '../../../posts.js';
 
 export default function Post({ post, tweets, pagination }) {
 	const router = useRouter();

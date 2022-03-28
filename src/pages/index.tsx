@@ -7,7 +7,7 @@ import Main from '@/components/Main';
 import Article from '@/components/Article';
 import Footer from '@/components/Footer';
 
-import { posts } from '../posts.js';
+import { posts } from '../../posts.js';
 
 export default function Home({ posts }) {
 	return (

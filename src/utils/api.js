@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 
 import MDXComponents from '@/components/MDXComponents';
-import { posts } from '../posts.js';
+import { posts } from '../../posts.js';
 
 const postDirectory = join(process.cwd(), '_posts');
 

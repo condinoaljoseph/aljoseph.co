@@ -1,8 +1,6 @@
 # aljoseph.co
 
-Personal blogs and portfolio. Just for fun and my hobby of coding. From static HTML site to client side rendered portfolio and finally using Nextjs.
-
-I will make an archive of my portfolio history in this repo. I am thinking of it. Well if you're interested checkout the projects for my roadmap. Inspired from dan's iconic [overreacted.io](https://overreacted.io/) and [leerob](https://leerob.io/).
+Inspired from dan's iconic [overreacted.io](https://overreacted.io/) and [leerob](https://leerob.io/).
 
 ### Are you an open-sourcerer?
 
@@ -14,10 +12,11 @@ $ cd aljoseph.co
 ```
 
 ### Env Variables
-Create `.env.local` for environment variables. You should have a twitter api token because most of my post is using the static twitter component.
+Create `.env.local` for environment variables or run `cp .env.example .env.local`. You should have a twitter api token because most of my post is using the static twitter component.
 
 ```env
 TWITTER_API_TOKEN=
+TWITTER_API_KEY=
 MAILCHIMP_API_KEY=
 MAILCHIMP_API_SERVER=
 MAILCHIMP_AUDIENCE_ID=
@@ -41,4 +40,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 
 ### Submit pull request
 
-I will check your wonderful PR's. Power!
+I will be so grateful for any PR submitted :).

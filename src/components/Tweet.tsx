@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import comma from 'comma-number';
 import { format } from 'date-fns';
+import BlurImage from '@/components/BlurImage';
 
 /**
  * Supports plain text, images, quote tweets.
@@ -87,15 +88,13 @@ export default function Tweet({
 						}
 					>
 						{media.map((m) => (
-							<Image
+							<BlurImage
 								key={m.media_key}
 								alt={text}
 								height={m.height}
 								width={m.width}
 								src={m.url}
 								className="rounded-lg"
-								placeholder="blur"
-								blurDataURL="data:image/jpeg;base64,aHR0cHM6Ly9jZG4yLndoYXRvcGxheS5jb20vdWkvcGxhY2Vob2xkZXIuanBn"
 							/>
 						))}
 					</div>

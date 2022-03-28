@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
 import Container from '@/components/Container';
 import Header from '@/components/Header';
@@ -13,7 +14,7 @@ import MDXComponents from '@/components/MDXComponents';
 
 import { getPostBySlug, getPagination } from '@/utils/api';
 import { getTweets } from '@/utils/twitter';
-import { posts } from '../../posts.js';
+import { posts } from '../../../posts.js';
 
 export default function Post({ post, tweets, pagination }) {
 	const router = useRouter();
@@ -94,10 +95,10 @@ export default function Post({ post, tweets, pagination }) {
 	);
 }
 
-export async function getStaticProps({ params }) {
-	const post = await getPostBySlug(params.slug);
+export const getStaticProps: GetStaticProps = async (context) => {
+	const post = await getPostBySlug(context.params.slug);
 	const tweets = await getTweets(post.tweetIDs);
-	const { prevPage, nextPage } = getPagination(params.slug);
+	const { prevPage, nextPage } = getPagination(context.params.slug);
 
 	return {
 		props: {
@@ -111,7 +112,7 @@ export async function getStaticProps({ params }) {
 	};
 }
 
-export function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
 	return {
 		paths: posts.map((post) => {
 			return {

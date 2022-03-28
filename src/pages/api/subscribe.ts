@@ -1,3 +1,5 @@
+
+import type { NextApiRequest, NextApiResponse } from 'next';
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
@@ -5,7 +7,7 @@ mailchimp.setConfig({
 	server: process.env.MAILCHIMP_API_SERVER
 });
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { fName, email } = req.body;
 
 	if (!email) {

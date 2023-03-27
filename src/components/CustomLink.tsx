@@ -6,8 +6,8 @@ const CustomLink = (props) => {
 
 	if (isInternalLink) {
 		return (
-			<Link href={href}>
-				<a {...props}>{children}</a>
+			<Link href={href} {...props}>
+				{children}
 			</Link>
 		);
 	}

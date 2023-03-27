@@ -42,10 +42,8 @@ export default function Custom404() {
 							<a href="https://giphy.com/gifs/gKsJUddjnpPG0">via GIPHY</a>
 						</p>
 						<p className="mt-6">
-							<Link href="/">
-								<a className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
-									Return Home
-								</a>
+							<Link href="/" className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none">
+								Return Home
 							</Link>
 						</p>
 					</article>

@@ -1,21 +1,22 @@
+import { getPagination } from 'lib/helpers';
 import Link from 'next/link';
 
-const Pagination = ({ pagination }) => {
-	const { prevPage, nextPage } = pagination;
+export function Pagination({ page }: { page: string }) {
+	const { prevPage, nextPage } = getPagination(page);
 
 	return (
 		<nav>
 			<ul className="text-base flex justify-between list-none">
 				<li className="pr-3">
 					{prevPage.url && (
-						<Link as={`/posts/${prevPage.url}`} href="/posts/[slug]"  className="text-pink-600 dark:text-pink-300 ">
+						<Link href={`/posts/${prevPage.url}`} className="text-pink-600 dark:text-pink-300 ">
 							← {prevPage.title}
 						</Link>
 					)}
 				</li>
 				<li className="pl-3">
 					{nextPage.url && (
-						<Link as={`/posts/${nextPage.url}`} href="/posts/[slug]" className="text-pink-600 dark:text-pink-300 ">
+						<Link href={`/posts/${nextPage.url}` }className="text-pink-600 dark:text-pink-300 ">
 							{nextPage.title} →
 						</Link>
 					)}
@@ -25,4 +26,3 @@ const Pagination = ({ pagination }) => {
 	);
 };
 
-export default Pagination;

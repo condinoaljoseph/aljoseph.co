@@ -1,23 +1,19 @@
+import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 const Logo = () => {
-	const router = useRouter();
-	const isIndex = router.pathname === '/';
+	const pathname = usePathname();
+	const isIndex = pathname === '/';
 
-	return isIndex ? (
-		<h1 className="font-mono">
-			<Link href="/" className="text-xl text-gray-900 dark:text-gray-200">
-				aljoseph.co
-			</Link>
-		</h1>
-	) : (
-		<h4 className="font-mono">
-			<Link href="/" className="text-xl text-pink-600 dark:text-pink-300 leading-9">
-					aljoseph.co
-			</Link>
-		</h4>
-	);
+	return (
+		<Link href="/" className={clsx(
+			'text-xl font-mono', 
+			isIndex ? 'text-gray-900 dark:text-gray-200' : 'text-xl text-pink-600 dark:text-pink-300'
+		)}>
+			aljoseph.co
+		</Link>
+	)
 };
 
 export default Logo;

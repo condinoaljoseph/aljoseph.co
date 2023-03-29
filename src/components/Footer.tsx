@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Footer = () => {
+export function Footer() {
 	return (
 		<footer className="mt-18 pt-7 text-base flex justify-between">
 			<div>
@@ -44,5 +42,3 @@ const Footer = () => {
 		</footer>
 	);
 };
-
-export default Footer;

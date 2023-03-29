@@ -1,7 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import comma from 'comma-number';
 import { format } from 'date-fns';
-import BlurImage from '@/components/BlurImage';
 
 /**
  * Supports plain text, images, quote tweets.
@@ -9,26 +10,26 @@ import BlurImage from '@/components/BlurImage';
  * Needs support for images, GIFs, and replies maybe?
  * Styles use !important to override Tailwind .prose inside MDX.
  */
-export default function Tweet({
+export function Tweet({
 	text,
 	id,
 	author,
 	media,
 	created_at,
 	public_metrics,
-	referenced_tweets
+	// referenced_tweets
 }) {
 	const authorUrl = `https://twitter.com/${author.username}`;
 	const likeUrl = `https://twitter.com/intent/like?tweet_id=${id}`;
 	const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
 	const replyUrl = `https://twitter.com/intent/tweet?in_reply_to=${id}`;
-	const tweetUrl = `https://twitter.com/${author.username}/status/${id}`;
+	// const tweetUrl = `https://twitter.com/${author.username}/status/${id}`;
 	const createdAt = new Date(created_at);
 
 	// const formattedText = text.replace(/https:\/\/[\n\S]+/g, '');
 	const formattedText = text.replace(/https:\/\/[\n\S]+/g, '');
-	const quoteTweet =
-		referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
+	// const quoteTweet =
+	// 	referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
 	return (
 		<div className="bg-gray-50 dark:bg-gray-800 flex items-center justify-center mb-7 prose dark:prose-dark max-w-none w-full">
@@ -41,7 +42,7 @@ export default function Tweet({
 						rel="noopener noreferrer noreferrer"
 					>
 						<Image
-							className="h-11 w-11 rounded-full"
+							className="h-11 w-11 rounded-full m-0"
 							src={author.profile_image_url}
 							alt={author.username}
 							width={48}
@@ -88,13 +89,13 @@ export default function Tweet({
 						}
 					>
 						{media.map((m) => (
-							<BlurImage
+							<Image
 								key={m.media_key}
 								alt={text}
 								height={m.height}
 								width={m.width}
 								src={m.url}
-								className="rounded-lg"
+								className="rounded-lg m-0" 
 							/>
 						))}
 					</div>

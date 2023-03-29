@@ -1,9 +1,9 @@
 import { Listbox } from '@headlessui/react'
 import { Fragment } from 'react'
 import { useTheme } from 'next-themes';
-import { cx } from '@/hooks/cx';
+import clsx from 'clsx';
 
-let settings = [
+const settings = [
   {
     value: 'light',
     label: 'Light',
@@ -105,7 +105,7 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
         </span>
       </Listbox.Button>
       <Listbox.Options
-        className={cx(
+        className={clsx(
           'absolute z-50 top-full right-0 bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-300',
           panelClassName
         )}
@@ -114,10 +114,10 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
           <Listbox.Option key={value} value={value} as={Fragment}>
             {({ active, selected }) => (
               <li
-                className={cx(
+                className={clsx(
                   'py-1 px-2 flex items-center cursor-pointer',
-                  selected && 'text-pink-300',
-                  active && 'bg-slate-50 dark:bg-slate-600/30'
+                  { 'text-pink-300': selected },
+                  { 'bg-slate-50 dark:bg-slate-600/30': active }
                 )}
               >
                 <Icon selected={selected} className="w-6 h-6 mr-2" />

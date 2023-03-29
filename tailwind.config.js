@@ -1,7 +1,7 @@
 const { fontFamily, boxShadow, fontSize } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	content: ['src/pages/**/*.{js,jsx,ts,tsx}', 'src/components/**/*.{js,jsx,ts,tsx}'],
+	content: ['src/app/**/*.{js,jsx,ts,tsx}', 'src/components/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -25,7 +25,7 @@ module.exports = {
 							li: {
 								'&:before': { backgroundColor: theme('colors.gray.900') }
 							}
-						}
+						},
 					}
 				},
 				dark: {
@@ -56,8 +56,7 @@ module.exports = {
 			})
 		},
 		fontFamily: {
-			sans: ['-apple-system', ...fontFamily.sans],
-			serif: ['Inter', ...fontFamily.serif],
+			serif: ['var(--font-kaisei)', ...fontFamily.serif],
 			mono: ['SFMono-Regular', ...fontFamily.mono]
 		},
 		fontSize: {

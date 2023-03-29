@@ -1,8 +1,6 @@
-const withMDX = require('@next/mdx')({
-	extension: /\.mdx?$/
-});
+const { withContentlayer } = require('next-contentlayer')
 
-module.exports = withMDX({
+module.exports = withContentlayer({
 	pageExtensions: ['tsx', 'md', 'mdx'],
 	images: {
 		domains: ['pbs.twimg.com', 'images.unsplash.com']
@@ -13,5 +11,9 @@ module.exports = withMDX({
 		}
 
 		return config;
+	},
+	experimental: {
+		appDir: true
 	}
-});
+})
+

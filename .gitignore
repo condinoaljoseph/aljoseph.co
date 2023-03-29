@@ -33,4 +33,8 @@ yarn-error.log*
 # vercel
 .vercel
 
+# rss
 public/feed.xml
+
+# contentlayer
+.contentlayer

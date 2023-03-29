@@ -25,6 +25,10 @@
 	@apply visible no-underline;
 }
 
+.prose h2, .prose h3, .prose h4 {
+	@apply font-serif
+}
+
 /* Code syntax highlighting */
 .token.comment,
 .token.prolog,
@@ -112,5 +116,5 @@ pre {
 }
 
 .mdx-marker {
-	@apply block -mx-4 px-3 bg-gray-100 bg-blue-100 dark:bg-blue-900 border-l-4 border-pink-700 dark:border-pink-300;
+	@apply block -mx-4 px-3 bg-blue-100 dark:bg-blue-900 border-l-4 border-pink-700 dark:border-pink-300;
 }

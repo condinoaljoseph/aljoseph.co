@@ -23,7 +23,7 @@ async function generate() {
 			const fullPath = join(postDirectory, slug);
 			const fileContents = await fs.readFile(fullPath, 'utf8');
 
-			const { data, content } = matter(fileContents);
+			const { data } = matter(fileContents);
 
 			feed.item({
 				title: data.title,

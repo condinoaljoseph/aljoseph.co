@@ -18,18 +18,35 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-		"baseUrl": "src",
-		"paths": {
-			"@/components/*": ["components/*"],
-			"@/utils/*": ["utils/*"],
-			"@/styles/*": ["styles/*"],
-			"@/hooks/*": ["hooks/*"]
-		}
+    "baseUrl": "src",
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ],
   "exclude": [
     "node_modules"

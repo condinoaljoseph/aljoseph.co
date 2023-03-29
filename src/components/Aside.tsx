@@ -1,11 +1,13 @@
-import Image from 'next/image';
-import Logo from './Logo';
-import Signup from './Signup';
-import { useRouter } from 'next/router';
+'use client'
 
-const Aside = () => {
-	const router = useRouter();
-	const isIndex = router.pathname === '/';
+import Image from 'next/image';
+import { Signup } from './Signup';
+import { usePathname } from 'next/navigation';
+import Logo from './Logo';
+
+export function Aside() {
+	const pathname = usePathname();
+	const isIndex = pathname === '/';
 
 	return (
 		<aside>
@@ -19,11 +21,11 @@ const Aside = () => {
 			)}
 			<div className="flex mb-12 items-center text-base">
 				<Image
-					src="https://pbs.twimg.com/profile_images/1369269303271288832/mYfh_SZK_400x400.jpg"
+					src="/assets/images/me.jpeg"
 					alt="Al Joseph Condino"
 					width={48}
 					height={48}
-					className=" rounded-full"
+					className="rounded-full"
 				/>
 				<p className="ml-3.5 max-w-xs text-gray-700 dark:text-gray-400">
 					Personal blog by Al Joseph Condino.
@@ -42,5 +44,3 @@ const Aside = () => {
 		</aside>
 	);
 };
-
-export default Aside;

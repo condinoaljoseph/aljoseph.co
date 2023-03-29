@@ -1,11 +1,9 @@
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import { formatPostDate, formatReadingTime } from '../lib/helpers';
 
-const BlogDate = ({ date, minutes = 6 }) => {
+export function BlogDate({ date, minutes = 2 }) {
 	return (
 		<small className="text-sm font-mono text-gray-700 dark:text-gray-400">
 			{formatPostDate(date)} &bull; {formatReadingTime(minutes)}
 		</small>
 	);
 };
-
-export default BlogDate;

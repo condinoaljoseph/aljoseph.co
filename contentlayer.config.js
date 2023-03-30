@@ -52,14 +52,6 @@ export default makeSource({
     remarkPlugins: [remarkCodeTitles],
     rehypePlugins: [
       rehypeSlug,
-        [
-          rehypeAutolinkHeadings,
-          {
-            properties: {
-              className: ['anchor', 'shadow-none']
-            }
-          }
-        ],
       mdxPrism
     ]
   }

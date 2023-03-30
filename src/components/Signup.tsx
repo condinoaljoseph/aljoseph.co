@@ -45,6 +45,11 @@ export function Signup() {
 	const [message, setMessage] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 
+	const reset = () => {
+		setFName('');
+		setEmail('');
+	}
+
 	const subscribe = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
@@ -60,6 +65,7 @@ export function Signup() {
 		setIsLoading(false);
 		if (error) {
 			setMessage(error);
+			reset();
 			return;
 		}
 
@@ -117,10 +123,7 @@ export function Signup() {
 							<small>{message}</small>
 						) : (
 							<small>
-								I won't send you spam.{' '}
-								<span className="block">
-									Unsubscribe at <em>any</em> time.
-								</span>
+								I won't send you spam. Unsubscribe at <em>any</em> time.
 							</small>
 						)}
 					</div>

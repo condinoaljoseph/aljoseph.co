@@ -1,7 +1,7 @@
 const { withContentlayer } = require('next-contentlayer')
 
 module.exports = withContentlayer({
-	pageExtensions: ['tsx', 'md', 'mdx'],
+	pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 	images: {
 		domains: ['pbs.twimg.com']
 	},

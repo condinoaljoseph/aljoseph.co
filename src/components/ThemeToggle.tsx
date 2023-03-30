@@ -34,12 +34,12 @@ function SunIcon({ selected, ...props }) {
       <path
         d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
         className={
-          selected ? 'fill-pink-600/20 stroke-pink-300' : 'stroke-slate-400 dark:stroke-slate-500'
+          selected ? 'fill-pink-600/20 stroke-pink-400' : 'stroke-slate-400 dark:stroke-slate-500'
         }
       />
       <path
         d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
-        className={selected ? 'stroke-pink-300' : 'stroke-slate-400 dark:stroke-slate-500'}
+        className={selected ? 'stroke-pink-400' : 'stroke-slate-400 dark:stroke-slate-500'}
       />
     </svg>
   )
@@ -116,7 +116,7 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
               <li
                 className={clsx(
                   'py-1 px-2 flex items-center cursor-pointer',
-                  { 'text-pink-300': selected },
+                  { 'text-pink-400 dark:text-pink-300': selected },
                   { 'bg-slate-50 dark:bg-slate-600/30': active }
                 )}
               >

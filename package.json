@@ -6,11 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --ignore-path .gitignore \"/**/*\"",
+    "format": "prettier --ignore-path .gitignore \"/**/*\" --write",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",

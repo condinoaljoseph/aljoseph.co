@@ -1,18 +1,19 @@
 # aljoseph.co
 
-Inspired from dan's iconic [overreacted.io](https://overreacted.io/) and [leerob](https://leerob.io/).
+This website is inspired by Dan Abramov's iconic [overreacted.io](https://overreacted.io/) and [leerob.io](https://leerob.io/). It is built using Next.js, Vercel, and Tailwind CSS.
 
-### Are you an open-sourcerer?
+### Getting Started
 
-Feel free to forked and clone this repository
+To get started with this project, clone the repository and navigate to the project directory:
 
 ```bash
 $ git clone git@github.com:condinoaljoseph/aljoseph.co.git
 $ cd aljoseph.co
 ```
 
-### Env Variables
-Create `.env.local` for environment variables or run `cp .env.example .env.local`. You should have a twitter api token because most of my post is using the static twitter component.
+### Environment Variables
+
+Create a `.env.local` file to store environment variables. You can use the provided `.env.example` file as a template. Make sure to obtain a Twitter API token, as most of the posts on this website use the static Twitter component.
 
 ```env
 TWITTER_API_TOKEN=
@@ -22,7 +23,7 @@ MAILCHIMP_API_SERVER=
 MAILCHIMP_AUDIENCE_ID=
 ```
 
-### Run the development server
+### Development Server
 
 ```bash
 npm run dev
@@ -30,14 +31,10 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser
+Then, open your web browser and go to [http://localhost:3000](http://localhost:3000) to see the website.
 
-### Built using
+### Contributing
 
-- [Next.js](https://nextjs.org/)
-- [Vercel](https://vercel.com)
-- [Tailwind CSS](https://tailwindcss.com/)
+If you are an open-sourcerer, feel free to fork and clone this repository. You can submit a pull request to contribute to this project. I would be grateful for any contributions.
 
-### Submit pull request
-
-I will be so grateful for any PR submitted :).
+Thank you for visiting my website!

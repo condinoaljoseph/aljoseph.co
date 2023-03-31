@@ -3,30 +3,33 @@
 @tailwind utilities;
 
 .prose .anchor {
-	@apply absolute invisible;
+  @apply absolute invisible;
 
-	margin-left: -1em;
-	padding-right: 0.5em;
-	width: 80%;
-	max-width: 700px;
-	cursor: pointer;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
 }
 
 .anchor:hover {
-	@apply visible no-underline;
+  @apply visible no-underline;
 }
 
 .prose .anchor:after {
-	@apply text-gray-300 dark:text-gray-700;
-	content: '#';
+  @apply text-gray-300 dark:text-gray-700;
+  content: "#";
 }
 
 .prose *:hover > .anchor {
-	@apply visible no-underline;
+  @apply visible no-underline;
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4 {
-	@apply font-serif
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-serif;
 }
 
 /* Code syntax highlighting */
@@ -34,11 +37,11 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	@apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-	@apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.property,
@@ -48,7 +51,7 @@
 .token.constant,
 .token.symbol,
 .token.deleted {
-	@apply text-green-700 dark:text-green-300;
+  @apply text-green-700 dark:text-green-300;
 }
 
 .token.selector,
@@ -57,7 +60,7 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-	@apply text-purple-700 dark:text-purple-300;
+  @apply text-purple-700 dark:text-purple-300;
 }
 
 .token.operator,
@@ -65,56 +68,56 @@
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	@apply text-yellow-700 dark:text-yellow-300;
+  @apply text-yellow-700 dark:text-yellow-300;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	@apply text-blue-700 dark:text-blue-300;
+  @apply text-blue-700 dark:text-blue-300;
 }
 
 .token.function,
 .token.class-name {
-	@apply text-pink-700 dark:text-pink-300;
+  @apply text-pink-700 dark:text-pink-300;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-	@apply text-yellow-300;
+  @apply text-yellow-300;
 }
 
-:not(pre[class*='language-']) > code {
-	@apply prose bg-yellow-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200;
+:not(pre[class*="language-"]) > code {
+  @apply prose bg-yellow-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200;
 }
 
-pre[class*='language-'] {
-	@apply mb-6 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
+pre[class*="language-"] {
+  @apply mb-6 p-4 bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto border border-gray-200 dark:border-gray-900;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
-	@apply text-gray-800 dark:text-gray-50 text-sm;
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply text-gray-800 dark:text-gray-50 text-sm;
 }
 
 pre::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 pre {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .remark-code-title {
-	@apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-bold;
+  @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-bold;
 }
 
 .remark-code-title + pre {
-	@apply mt-0 rounded-t-none;
+  @apply mt-0 rounded-t-none;
 }
 
 .mdx-marker {
-	@apply block -mx-4 px-3 bg-blue-100 dark:bg-blue-900 border-l-4 border-pink-700 dark:border-pink-300;
+  @apply block -mx-4 px-3 bg-blue-100 dark:bg-blue-900 border-l-4 border-pink-700 dark:border-pink-300;
 }

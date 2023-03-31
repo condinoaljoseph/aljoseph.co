@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": [
+    "./src/**/*.{ts,js,jsx,tsx}": [
       "eslint --ignore-path .gitignore --fix",
       "prettier --ignore-path .gitignore --write"
     ]

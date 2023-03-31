@@ -1,58 +1,57 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import remarkCodeTitles from 'remark-code-titles'
-import mdxPrism from 'mdx-prism'
-import readingTime from 'reading-time'
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import remarkCodeTitles from "remark-code-titles";
+import mdxPrism from "mdx-prism";
+import readingTime from "reading-time";
 
 export const Post = defineDocumentType(() => ({
-  name: 'Post',
+  name: "Post",
   filePathPattern: `**/*.mdx`,
-  contentType: 'mdx',
+  contentType: "mdx",
   fields: {
     title: {
-      type: 'string',
+      type: "string",
       required: true,
     },
     excerpt: {
-      type: 'string',
+      type: "string",
       required: true,
     },
     date: {
-      type: 'string',
+      type: "string",
       required: true,
     },
     image: {
-      type: 'string'
-    }
+      type: "string",
+    },
   },
   computedFields: {
     slug: {
-      type: 'string',
+      type: "string",
       resolve: (post) => `${post._raw.flattenedPath}`,
     },
     tweetIds: {
-      type: 'array',
+      type: "array",
       resolve: (post) => {
-        const tweetMatches = post.body.raw.match(/<StaticTweet\sid="[0-9]+"\s\/>/g);
+        const tweetMatches = post.body.raw.match(
+          /<StaticTweet\sid="[0-9]+"\s\/>/g
+        );
         return tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]);
-      }
+      },
     },
     readTime: {
-      type: 'number',
-      resolve: (post) => readingTime(post.body.raw).minutes
-    }
+      type: "number",
+      resolve: (post) => readingTime(post.body.raw).minutes,
+    },
   },
-}))
+}));
 
 export default makeSource({
-  contentDirPath: '_posts',
+  contentDirPath: "_posts",
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkCodeTitles],
-    rehypePlugins: [
-      rehypeSlug,
-      mdxPrism
-    ]
-  }
-})
+    rehypePlugins: [rehypeSlug, mdxPrism],
+  },
+});

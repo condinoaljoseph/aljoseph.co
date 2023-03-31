@@ -1,8 +1,8 @@
 ---
-title: 'Adding RSS feed to your Next.js app'
-slug: 'generating-rss-feed'
-excerpt: 'Snippets for adding RSS feed on my NextJS static site.'
-date: '2021-04-29'
+title: "Adding RSS feed to your Next.js app"
+slug: "generating-rss-feed"
+excerpt: "Snippets for adding RSS feed on my NextJS static site."
+date: "2021-04-29"
 ---
 
 Having RSS feed helps us to stay up-to-date with the latest content from our favorite websites. In this blog post, I will quickly show you how to create your own.
@@ -21,20 +21,20 @@ npm i rss
 
 ## Create a function to generate RSS feed
 
-I have all my posts stored locally on `_posts` directory and manage it using [contentlayer](https://www.contentlayer.dev/). 
+I have all my posts stored locally on `_posts` directory and manage it using [contentlayer](https://www.contentlayer.dev/).
 
 ### Extracting data from .mdx files
 
 Since I use the `.mdx` file format on my posts, I must use the built-in Nodejs utilities to extract the data.
 
 ```js
-const { promises: fs } = require('fs');
-const { join } = require('path');
+const { promises: fs } = require("fs");
+const { join } = require("path");
 
-const postDirectory = join(process.cwd(), '_posts');
+const postDirectory = join(process.cwd(), "_posts");
 
 async function getPostSlugs() {
-	return await fs.readdir(postDirectory);
+  return await fs.readdir(postDirectory);
 }
 ```
 
@@ -45,34 +45,34 @@ In this snippet, where creating an asynchronous function fetch all our post slug
 Now, we just have to map through post slugs and read those file contents.
 
 ```js
-const matter = require('gray-matter');
+const matter = require("gray-matter");
 
 async function generate() {
-	const feed = new RSS({
-		title: 'Al Joseph Condino',
-		site_url: 'https://aljoseph.co',
-		feed_url: 'https://aljoseph.co/feed.xml'
-	});
+  const feed = new RSS({
+    title: "Al Joseph Condino",
+    site_url: "https://aljoseph.co",
+    feed_url: "https://aljoseph.co/feed.xml",
+  });
 
-	const slugs = await getPostSlugs();
+  const slugs = await getPostSlugs();
 
-	await Promise.all(
-		slugs.map(async (slug) => {
-			const fullPath = join(postDirectory, slug);
-			const fileContents = await fs.readFile(fullPath, 'utf8');
+  await Promise.all(
+    slugs.map(async (slug) => {
+      const fullPath = join(postDirectory, slug);
+      const fileContents = await fs.readFile(fullPath, "utf8");
 
-			const { data, content } = matter(fileContents);
+      const { data, content } = matter(fileContents);
 
-			feed.item({
-				title: data.title,
-				url: 'https://aljoseph.co/posts/' + slug.replace(/\.mdx?/, ''),
-				date: data.date,
-				description: data.excerpt
-			});
-		})
-	);
+      feed.item({
+        title: data.title,
+        url: "https://aljoseph.co/posts/" + slug.replace(/\.mdx?/, ""),
+        date: data.date,
+        description: data.excerpt,
+      });
+    })
+  );
 
-	return await fs.writeFile('./public/feed.xml', feed.xml({ indent: true }));
+  return await fs.writeFile("./public/feed.xml", feed.xml({ indent: true }));
 }
 
 generate();
@@ -83,43 +83,43 @@ We parse those front matters from our file contents to get each of those metadat
 Here's the final code snippet.
 
 ```js
-const { promises: fs } = require('fs');
-const { join } = require('path');
-const RSS = require('rss');
-const matter = require('gray-matter');
+const { promises: fs } = require("fs");
+const { join } = require("path");
+const RSS = require("rss");
+const matter = require("gray-matter");
 
-const postDirectory = join(process.cwd(), '_posts');
+const postDirectory = join(process.cwd(), "_posts");
 
 async function getPostSlugs() {
-	return await fs.readdir(postDirectory);
+  return await fs.readdir(postDirectory);
 }
 
 async function generate() {
-	const feed = new RSS({
-		title: 'Al Joseph Condino',
-		site_url: 'https://aljoseph.co',
-		feed_url: 'https://aljoseph.co/feed.xml'
-	});
+  const feed = new RSS({
+    title: "Al Joseph Condino",
+    site_url: "https://aljoseph.co",
+    feed_url: "https://aljoseph.co/feed.xml",
+  });
 
-	const slugs = await getPostSlugs();
+  const slugs = await getPostSlugs();
 
-	await Promise.all(
-		slugs.map(async (slug) => {
-			const fullPath = join(postDirectory, slug);
-			const fileContents = await fs.readFile(fullPath, 'utf8');
+  await Promise.all(
+    slugs.map(async (slug) => {
+      const fullPath = join(postDirectory, slug);
+      const fileContents = await fs.readFile(fullPath, "utf8");
 
-			const { data, content } = matter(fileContents);
+      const { data, content } = matter(fileContents);
 
-			feed.item({
-				title: data.title,
-				url: 'https://aljoseph.co/posts/' + slug.replace(/\.mdx?/, ''),
-				date: data.date,
-				description: data.excerpt
-			});
-		})
-	);
+      feed.item({
+        title: data.title,
+        url: "https://aljoseph.co/posts/" + slug.replace(/\.mdx?/, ""),
+        date: data.date,
+        description: data.excerpt,
+      });
+    })
+  );
 
-	return await fs.writeFile('./public/feed.xml', feed.xml({ indent: true }));
+  return await fs.writeFile("./public/feed.xml", feed.xml({ indent: true }));
 }
 
 generate();

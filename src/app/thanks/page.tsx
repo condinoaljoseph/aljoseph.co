@@ -7,15 +7,13 @@ export const metadata: Metadata = {
 export default function Thanks() {
   return (
     <main>
-      <h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-bold">
-        Thank you for subscribing
+      <h1 className="mb-7 mt-10 sm:text-4xl text-3xl font-bold font-serif">
+        Thank You for Subscribing!
       </h1>
-      <section className="text-xl leading-8">
-        <p>
-          You are now confirmed. You can expect to receive emails as I create
-          new content.
-        </p>
-      </section>
+      <article className="prose dark:prose-dark w-full">
+        You are now confirmed. You can expect to receive emails as I create new
+        content.
+      </article>
     </main>
   );
 }

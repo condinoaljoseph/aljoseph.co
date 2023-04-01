@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import clsx from "clsx";
 
 function SignupIcon() {
   return (
@@ -38,7 +39,7 @@ function SignupIcon() {
   );
 }
 
-export function Signup() {
+export function Signup({ className }: { className?: string }) {
   const router = useRouter();
   const [fName, setFName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,7 +74,12 @@ export function Signup() {
   };
 
   return (
-    <div className="font-default shadow-cm mb-10 sm:rounded-md text-gray-900 dark:text-gray-100 dark:bg-gray-800">
+    <div
+      className={clsx(
+        "font-default shadow-cm mb-10 sm:rounded-md text-gray-900 dark:text-gray-100 dark:bg-gray-800",
+        className
+      )}
+    >
       <form onSubmit={subscribe}>
         <div className="grid sm:grid-cols-2">
           <div className="p-12 bg-gray-100 dark:bg-gray-700 sm:rounded-tl-md sm:rounded-bl-md sm:rounded-tr-none rounded-tl-md rounded-tr-md">

@@ -8,13 +8,14 @@ export const metadata: Metadata = {
 export default function Subscribe() {
   return (
     <main>
-      <header>
-        <h1 className="mb-7 mt-14 sm:text-5xl text-4xl font-bold">Yay!</h1>
-      </header>
-      <article className="text-xl leading-8 mb-5">
-        <p>Want to keep updated? Subscribe to my newsletter.</p>
-      </article>
-      <Signup />
+      <h1 className="mb-7 mt-10 sm:text-4xl text-3xl font-bold font-serif">
+        Subscribe to My Newsletter
+      </h1>
+      <p className="prose dark:prose-dark w-full">
+        Stay up-to-date with the latest news and updates! Subscribe to my
+        newsletter and never miss a beat.
+      </p>
+      <Signup className="my-4" />
     </main>
   );
 }

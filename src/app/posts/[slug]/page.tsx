@@ -75,6 +75,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const post = allPosts.find((post) => post.slug === params.slug);
 
+  const ogImage = `https://aljoseph.co/api/og?title=${post?.title}`;
+
   return {
     title: `${post?.title} - Al Joseph Condino`,
     description: post?.excerpt,
@@ -83,12 +85,18 @@ export async function generateMetadata({ params }) {
       type: "website",
       siteName: "Al Joseph Condino",
       description: post?.excerpt,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       site: "@condino_aj",
       title: post?.title,
       description: post?.excerpt,
+      images: [ogImage],
     },
   };
 }

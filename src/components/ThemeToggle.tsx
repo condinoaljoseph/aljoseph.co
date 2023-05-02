@@ -1,5 +1,5 @@
 import { Listbox } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
 
@@ -107,7 +107,16 @@ function PcIcon({ selected, ...props }) {
 }
 
 export function ThemeToggle({ panelClassName = "mt-4" }) {
+  const [mounted, setMounted] = useState(false);
   const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Listbox value={theme} onChange={setTheme}>

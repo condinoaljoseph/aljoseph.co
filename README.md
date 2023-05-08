@@ -1,7 +1,5 @@
 # aljoseph.co
 
-![Alt](https://repobeats.axiom.co/api/embed/29be40e97658ed74bec264f66d105b01672ba284.svg "Repobeats analytics image")
-
 This website is inspired by Dan Abramov's iconic [overreacted.io](https://overreacted.io/) and [leerob.io](https://leerob.io/). It is built using Next.js, Vercel, and Tailwind CSS.
 
 ### Getting Started

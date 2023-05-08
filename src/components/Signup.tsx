@@ -100,7 +100,7 @@ export function Signup({ className }: { className?: string }) {
                   name="first_name"
                   aria-label="Your first name"
                   placeholder="Your first name"
-                  className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none"
+                  className="appearance-none rounded-md relative block bg-white dark:bg-gray-900 w-full px-3 py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-600 text-gray-700 dark:text-gray-300 focus:outline-none"
                   value={fName}
                   onChange={(e) => setFName(e.target.value)}
                   required
@@ -112,7 +112,7 @@ export function Signup({ className }: { className?: string }) {
                   name="email_address"
                   aria-label="Your email"
                   placeholder="Your email"
-                  className="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none"
+                  className="appearance-none rounded-md relative block bg-white dark:bg-gray-900 w-full px-3 py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-600 text-gray-700 dark:text-gray-300 focus:outline-none"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required

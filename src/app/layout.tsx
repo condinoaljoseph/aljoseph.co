@@ -24,7 +24,10 @@ const kaisei = Kaisei_Tokumin({
 export const metadata: Metadata = {
   title: "Al Joseph Condino - Developer and Writer",
   description: "Personal blog by Al Joseph Condino",
-  viewport: "width=device-width, initial-scale=1",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   openGraph: {
     title: "aljoseph.co",
     type: "website",
@@ -44,7 +47,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html suppressHydrationWarning lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={clsx(inter.variable, kaisei.variable)}>
         <RootLayoutProviders>

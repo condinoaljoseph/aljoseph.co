@@ -27,8 +27,7 @@ If you need to add another method, you'll have to change the TextFormatter class
 Yes, I know, but I'm telling you the concept with the simplest example. What if these were complex algorithms? Each algorithm can reach hundreds of lines of code, and each time you fix a simple bug or make a slight adjustment, you might create a new bug in an already working code. 
 
 
-## Insert Strategy Pattern
-
+## Introducing the Strategy Pattern
 
 > The Strategy pattern is a behavioral design pattern that defines a family of interchangeable algorithms, encapsulating each algorithm inside a separate class.
 
@@ -40,9 +39,9 @@ This pattern consists of three key components:
 By using the Strategy pattern, we can decouple the algorithms from the object that use them, making it easy to switch between algorithms and add new ones without modifying the existing codebase even in runtime.
 
 
-## Implementation
+## Implementation Steps
 
-Let's try to Implement this concept on the text formatting application.
+Let's implement the Strategy pattern in the text formatting application.
 
 ### Step 1
 
@@ -102,7 +101,7 @@ class Strategy {
 }
 ```
 
-With the strategy pattern implemented, users can easily switch between formatting methods.
+With the Strategy pattern implemented, client code can create a new strategy object and pass it to the context. The context has a setter that allows the client to replace the strategy at runtime.
 
 ```typescript
 const strategy = new Strategy(new UppercaseStrategy());
@@ -117,6 +116,6 @@ console.log(strategy.executeStrategy('SOLID Principle'));  // solid principle
 
 ## Conclusion
 
-One popular real-world example where the Strategy Pattern has been applied is [PassportJS](https://github.com/jaredhanson/passport), an authentication middleware for Node.js. The code is highly extensible, allowing developers around the world to easily plug in their own authentication strategies without modifying the main code.
+One popular real-world example where the Strategy Pattern has been applied is [PassportJS](https://github.com/jaredhanson/passport), an authentication middleware for Node.js. The code is highly extensible, allowing developers around the world to easily plug in their own authentication strategies without modifying the main code. This adherance to the **Open/Closed Principle** leads to cleaner, more maintanable, and more extensible code.
 
-If you want to learn more about design patterns, especially in TypeScript, feel free to subscribe to my newsletter or visit my repository on [design patterns in typescript](https://github.com/condinoaljoseph/design-patterns-typescript/).
+If you want to dive deeper into design patterns, and explore more examples in TypeScript, feel free to subscribe to my newsletter or visit my repository on [design patterns in typescript](https://github.com/condinoaljoseph/design-patterns-typescript/).

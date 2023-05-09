@@ -29,16 +29,7 @@ export function Aside() {
         />
         <p className="ml-3.5 max-w-xs text-gray-700 dark:text-gray-400">
           Personal blog by Al Joseph Condino.
-          <span className="block">
-            Web developer at{" "}
-            <a
-              className="text-pink-700 dark:text-pink-300 shadow-link hover:shadow-none"
-              href="https://whatoplay.com/"
-            >
-              whatoplay.com
-            </a>
-            .
-          </span>
+          <span className="block">I explain with words and code.</span>
         </p>
       </div>
     </aside>
